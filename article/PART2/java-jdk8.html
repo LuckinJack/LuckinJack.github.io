@@ -1,0 +1,2839 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JDK8 · LuckinJack的GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LuckinJack">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../PART3/part3-summary.html" />
+    
+    
+    <link rel="prev" href="java-jvm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    欢迎页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../CATALOG.html">
+            
+                <a href="../../CATALOG.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../PART0/part0-summary.html">
+            
+                <a href="../PART0/part0-summary.html">
+            
+                    
+                    PART 0 学术研究
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    操作系统
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../PART0/advanced-mathematics/am-summary.html">
+            
+                <a href="../PART0/advanced-mathematics/am-summary.html">
+            
+                    
+                    高等数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../PART0/advanced-mathematics/am01-unctional-limit-and-continuity.html">
+            
+                <a href="../PART0/advanced-mathematics/am01-unctional-limit-and-continuity.html">
+            
+                    
+                    01 函数、极限、连续
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../PART0/advanced-mathematics/am02-single-variable-differential-calculus.html">
+            
+                <a href="../PART0/advanced-mathematics/am02-single-variable-differential-calculus.html">
+            
+                    
+                    02 一元函数微分学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="../PART0/advanced-mathematics/am03-single-variable-integral-calculus.html">
+            
+                <a href="../PART0/advanced-mathematics/am03-single-variable-integral-calculus.html">
+            
+                    
+                    03 一元函数积分学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.4" data-path="../PART0/advanced-mathematics/am04-calculus-of-polynomial-function.html">
+            
+                <a href="../PART0/advanced-mathematics/am04-calculus-of-polynomial-function.html">
+            
+                    
+                    04 多元函数微积分学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.5" data-path="../PART0/advanced-mathematics/am05-ordinary-differential-equation.html">
+            
+                <a href="../PART0/advanced-mathematics/am05-ordinary-differential-equation.html">
+            
+                    
+                    05 常微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../PART0/linear-algebra/la-summary.html">
+            
+                <a href="../PART0/linear-algebra/la-summary.html">
+            
+                    
+                    线性代数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../PART0/linear-algebra/la-01-determinant.html">
+            
+                <a href="../PART0/linear-algebra/la-01-determinant.html">
+            
+                    
+                    01 行列式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.2" data-path="../PART0/linear-algebra/la-02-matrix.html">
+            
+                <a href="../PART0/linear-algebra/la-02-matrix.html">
+            
+                    
+                    02 矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.3" data-path="../PART0/linear-algebra/la-03-vector.html">
+            
+                <a href="../PART0/linear-algebra/la-03-vector.html">
+            
+                    
+                    03 向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.4" data-path="../PART0/linear-algebra/la-04-linear-equation-system.html">
+            
+                <a href="../PART0/linear-algebra/la-04-linear-equation-system.html">
+            
+                    
+                    04 线性方程组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.5" data-path="../PART0/linear-algebra/la-05-eigenvalue&eigenvector&similarity-matrix.html">
+            
+                <a href="../PART0/linear-algebra/la-05-eigenvalue&eigenvector&similarity-matrix.html">
+            
+                    
+                    05 特征值&特征向量&相似矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.6" data-path="../PART0/linear-algebra/la-06-quadratic-form.html">
+            
+                <a href="../PART0/linear-algebra/la-06-quadratic-form.html">
+            
+                    
+                    06 二次型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../PART0/code-spec/code-spec-summary.html">
+            
+                <a href="../PART0/code-spec/code-spec-summary.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../PART0/code-spec/java-tool-class-development-norm.html">
+            
+                <a href="../PART0/code-spec/java-tool-class-development-norm.html">
+            
+                    
+                    Java工具类规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../PART1/part1-summary.html">
+            
+                <a href="../PART1/part1-summary.html">
+            
+                    
+                    PART 1 开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../PART1/idea/IntelliJ-idea-summary.html">
+            
+                <a href="../PART1/idea/IntelliJ-idea-summary.html">
+            
+                    
+                    IntelliJ IDEA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../PART1/idea/IntelliJ-idea-00-introduce.html">
+            
+                <a href="../PART1/idea/IntelliJ-idea-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" data-path="../PART1/idea/IntelliJ-idea-01-install.html">
+            
+                <a href="../PART1/idea/IntelliJ-idea-01-install.html">
+            
+                    
+                    02 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    JetBrains PyCharm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../PART1/pycharm/Intellij-idea-install.md">
+            
+                <span>
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.2" data-path="../PART1/pycharm/Intellij-idea-install.md">
+            
+                <span>
+            
+                    
+                    02 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                    Maven
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
+                    SVN
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../PART1/git/git-summary.html">
+            
+                <a href="../PART1/git/git-summary.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.5.1" data-path="../PART1/git/git-00-introduce.html">
+            
+                <a href="../PART1/git/git-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5.2" data-path="../PART1/git/git-01-install&config.html">
+            
+                <a href="../PART1/git/git-01-install&config.html">
+            
+                    
+                    02 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5.3" data-path="../PART1/git/git-02-commonly-used-commands.html">
+            
+                <a href="../PART1/git/git-02-commonly-used-commands.html">
+            
+                    
+                    03 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="part2-summary.html">
+            
+                <a href="part2-summary.html">
+            
+                    
+                    PART 2 Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="java-collection.html">
+            
+                <a href="java-collection.html">
+            
+                    
+                    容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="java-generics.html">
+            
+                <a href="java-generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="java-reflection.html">
+            
+                <a href="java-reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="java-annotation.html">
+            
+                <a href="java-annotation.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="java-concurrency.html">
+            
+                <a href="java-concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="java-jvm.html">
+            
+                <a href="java-jvm.html">
+            
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3.7" data-path="java-jdk8.html">
+            
+                <a href="java-jdk8.html">
+            
+                    
+                    JDK8
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../PART3/part3-summary.html">
+            
+                <a href="../PART3/part3-summary.html">
+            
+                    
+                    PART 3 Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1.1" data-path="../PART3/basic/python-basic-01-basic-syntax.html">
+            
+                <a href="../PART3/basic/python-basic-01-basic-syntax.html">
+            
+                    
+                    Python入门（一）基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" >
+            
+                <span>
+            
+                    
+                    工具包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.2.1" data-path="../PART3/tool-kit/python-jupyter-notebook.html">
+            
+                <a href="../PART3/tool-kit/python-jupyter-notebook.html">
+            
+                    
+                    Jupyter NoteBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.2" data-path="../PART3/tool-kit/python-matplotlib.html">
+            
+                <a href="../PART3/tool-kit/python-matplotlib.html">
+            
+                    
+                    Matplotlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.3" data-path="../PART3/tool-kit/python-numpy.html">
+            
+                <a href="../PART3/tool-kit/python-numpy.html">
+            
+                    
+                    Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.4" data-path="../PART3/tool-kit/python-pandas.html">
+            
+                <a href="../PART3/tool-kit/python-pandas.html">
+            
+                    
+                    Pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" >
+            
+                <span>
+            
+                    
+                    爬虫
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../PART4/part4-summary.html">
+            
+                <a href="../PART4/part4-summary.html">
+            
+                    
+                    PART 4 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../PART4/mysql/mysql-summary.html">
+            
+                <a href="../PART4/mysql/mysql-summary.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1.1" data-path="../PART4/mysql/mysql-00-introduce.html">
+            
+                <a href="../PART4/mysql/mysql-00-introduce.html">
+            
+                    
+                    00 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.2" data-path="../PART4/mysql/mysql-01-basic-operation.html">
+            
+                <a href="../PART4/mysql/mysql-01-basic-operation.html">
+            
+                    
+                    01 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.3" data-path="../PART4/mysql/mysql-02-commly-used-functions.html">
+            
+                <a href="../PART4/mysql/mysql-02-commly-used-functions.html">
+            
+                    
+                    02 常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.4" data-path="../PART4/mysql/mysql-03-query-tuning-solutions.html">
+            
+                <a href="../PART4/mysql/mysql-03-query-tuning-solutions.html">
+            
+                    
+                    03 查询调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.5" data-path="../PART4/mysql/mysql-04-deep-in-principles.html">
+            
+                <a href="../PART4/mysql/mysql-04-deep-in-principles.html">
+            
+                    
+                    04 深入原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.6" data-path="../PART4/mysql/mysql-05-advance-operation.html">
+            
+                <a href="../PART4/mysql/mysql-05-advance-operation.html">
+            
+                    
+                    05 高级操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.7" data-path="../PART4/mysql/mysql-06-versions-refrence.html">
+            
+                <a href="../PART4/mysql/mysql-06-versions-refrence.html">
+            
+                    
+                    06 版本速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../PART5/part5-summary.html">
+            
+                <a href="../PART5/part5-summary.html">
+            
+                    
+                    PART 5 常用服务框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../PART5/spring/spring-summary.html">
+            
+                <a href="../PART5/spring/spring-summary.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1.1" data-path="../PART5/spring/spring-00-introduce.html">
+            
+                <a href="../PART5/spring/spring-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../PART5/springboot/springboot-summary.html">
+            
+                <a href="../PART5/springboot/springboot-summary.html">
+            
+                    
+                    SpringBoot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.2.1" data-path="../PART5/springboot/spring-00-introduce.md">
+            
+                <span>
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.2" data-path="../PART5/springboot/spring-validation.html">
+            
+                <a href="../PART5/springboot/spring-validation.html">
+            
+                    
+                    Validate参数校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.3" data-path="../PART5/springboot/spring-async.html">
+            
+                <a href="../PART5/springboot/spring-async.html">
+            
+                    
+                    Async异步组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.4" data-path="../PART5/springboot/spring-single-multiple-dynamic-data-sources.md">
+            
+                <span>
+            
+                    
+                    数据源配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.5" data-path="../PART5/springboot/spring-schedule.html">
+            
+                <a href="../PART5/springboot/spring-schedule.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.6" data-path="../PART5/springboot/spring-transaction.html">
+            
+                <a href="../PART5/springboot/spring-transaction.html">
+            
+                    
+                    Transaction事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.7" data-path="../PART5/springboot/spring-starter.md">
+            
+                <span>
+            
+                    
+                    自定义Starter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.8" data-path="../PART5/springboot/spring-aop.html">
+            
+                <a href="../PART5/springboot/spring-aop.html">
+            
+                    
+                    AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.9" data-path="../PART5/springboot/spring-config.html">
+            
+                <a href="../PART5/springboot/spring-config.html">
+            
+                    
+                    Config配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="../PART5/springcloud/springcloud-summary.html">
+            
+                <a href="../PART5/springcloud/springcloud-summary.html">
+            
+                    
+                    SpringCloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" data-path="../PART5/springsecurity/springsecurity-summary.html">
+            
+                <a href="../PART5/springsecurity/springsecurity-summary.html">
+            
+                    
+                    SprigSecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.5" data-path="../PART5/mybatis/mybatis-summary.html">
+            
+                <a href="../PART5/mybatis/mybatis-summary.html">
+            
+                    
+                    Mybatis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.5.1" data-path="../PART5/mybatis/mybatis-00-introduce.html">
+            
+                <a href="../PART5/mybatis/mybatis-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6" data-path="../PART5/zookeeper/zookeeper-summary.html">
+            
+                <a href="../PART5/zookeeper/zookeeper-summary.html">
+            
+                    
+                    Zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.6.1" data-path="../PART5/zookeeper/zookeeper-00-introduce.html">
+            
+                <a href="../PART5/zookeeper/zookeeper-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6.2" data-path="../PART5/zookeeper/zookeeper-01-install&config.html">
+            
+                <a href="../PART5/zookeeper/zookeeper-01-install&config.html">
+            
+                    
+                    02 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6.3" data-path="../PART5/zookeeper/zookeeper-02-commonly-used-commands.html">
+            
+                <a href="../PART5/zookeeper/zookeeper-02-commonly-used-commands.html">
+            
+                    
+                    03 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6.4" data-path="../PART5/zookeeper/zookeeper-03-core-principles.html">
+            
+                <a href="../PART5/zookeeper/zookeeper-03-core-principles.html">
+            
+                    
+                    04 核心原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../PART6/part6-summary.html">
+            
+                <a href="../PART6/part6-summary.html">
+            
+                    
+                    PART 6 中间件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" >
+            
+                <span>
+            
+                    
+                    Kafka
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" >
+            
+                <span>
+            
+                    
+                    ElasticSearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.3" data-path="../PART6/nginx/nginx-summary.html">
+            
+                <a href="../PART6/nginx/nginx-summary.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.3.1" data-path="../PART6/nginx/nginx-00-introduce.html">
+            
+                <a href="../PART6/nginx/nginx-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../PART7/part7-summary.html">
+            
+                <a href="../PART7/part7-summary.html">
+            
+                    
+                    PART 7 ETL与数仓
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" >
+            
+                <span>
+            
+                    
+                    Kettle
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="../PART7/otter/otter-summary.html">
+            
+                <a href="../PART7/otter/otter-summary.html">
+            
+                    
+                    Otter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.2.1" data-path="../PART7/otter/otter-00-introduce.html">
+            
+                <a href="../PART7/otter/otter-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.2" data-path="../PART7/otter/otter-01-scheduling-model.html">
+            
+                <a href="../PART7/otter/otter-01-scheduling-model.html">
+            
+                    
+                    02 调度模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.3" data-path="../PART7/otter/otter-02-import-algorithm.html">
+            
+                <a href="../PART7/otter/otter-02-import-algorithm.html">
+            
+                    
+                    03 调入库算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.4" data-path="../PART7/otter/otter-03-loop-control.html">
+            
+                <a href="../PART7/otter/otter-03-loop-control.html">
+            
+                    
+                    04 回环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.5" data-path="../PART7/otter/otter-04-data-consistency.html">
+            
+                <a href="../PART7/otter/otter-04-data-consistency.html">
+            
+                    
+                    05 数据一致性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.6" data-path="../PART7/otter/otter-05-quick-start.html">
+            
+                <a href="../PART7/otter/otter-05-quick-start.html">
+            
+                    
+                    06 快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.7" data-path="../PART7/otter/otter-06-admin-webapp-introduce.html">
+            
+                <a href="../PART7/otter/otter-06-admin-webapp-introduce.html">
+            
+                    
+                    07 manager运行与介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.8" data-path="../PART7/otter/otter-07-sync-strategy-webapp-configure.html">
+            
+                <a href="../PART7/otter/otter-07-sync-strategy-webapp-configure.html">
+            
+                    
+                    08 同步策略配置方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="../PART7/data-warehouse/data-warehouse-summary.html">
+            
+                <a href="../PART7/data-warehouse/data-warehouse-summary.html">
+            
+                    
+                    数据仓库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.3.1" data-path="../PART7/data-warehouse/data-warehouse-01.html">
+            
+                <a href="../PART7/data-warehouse/data-warehouse-01.html">
+            
+                    
+                    01 数仓入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../PART8/part8-summary.html">
+            
+                <a href="../PART8/part8-summary.html">
+            
+                    
+                    PART 8 大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.1" >
+            
+                <span>
+            
+                    
+                    Spark
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.2" >
+            
+                <span>
+            
+                    
+                    Yarn
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.3" data-path="../PART8/hbase/hbase-summary.html">
+            
+                <a href="../PART8/hbase/hbase-summary.html">
+            
+                    
+                    HBase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4" data-path="../PART8/flink/flink-summary.html">
+            
+                <a href="../PART8/flink/flink-summary.html">
+            
+                    
+                    Flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.4.1" data-path="../PART8/flink/flink-01-introduction.html">
+            
+                <a href="../PART8/flink/flink-01-introduction.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.2" data-path="../PART8/flink/flink-02-quick-start.html">
+            
+                <a href="../PART8/flink/flink-02-quick-start.html">
+            
+                    
+                    02 快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.3" data-path="../PART8/flink/flink-03-architecture-and-principle.html">
+            
+                <a href="../PART8/flink/flink-03-architecture-and-principle.html">
+            
+                    
+                    03 架构与原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.4" data-path="../PART8/flink/flink-04-data-stream-api.html">
+            
+                <a href="../PART8/flink/flink-04-data-stream-api.html">
+            
+                    
+                    04 DataStreamAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.5" data-path="../PART8/flink/flink-05-window&watermark.html">
+            
+                <a href="../PART8/flink/flink-05-window&watermark.html">
+            
+                    
+                    05 Window & Watermark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.6" data-path="../PART8/flink/flink-06-flink-sql-and-table-api.html">
+            
+                <a href="../PART8/flink/flink-06-flink-sql-and-table-api.html">
+            
+                    
+                    06 Flink SQL & Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.7" data-path="../PART8/flink/flink-07-flink-cluster-deployment.html">
+            
+                <a href="../PART8/flink/flink-07-flink-cluster-deployment.html">
+            
+                    
+                    07 集群部署与应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.8" data-path="../PART8/flink/flink-08-flink-state-manage-and-recovery.html">
+            
+                <a href="../PART8/flink/flink-08-flink-state-manage-and-recovery.html">
+            
+                    
+                    08 状态管理与恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="../PART9/part9-summary.html">
+            
+                <a href="../PART9/part9-summary.html">
+            
+                    
+                    PART 9 人工智能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="../PART9/machine-learning/machine-learning-summary.html">
+            
+                <a href="../PART9/machine-learning/machine-learning-summary.html">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1.1" data-path="../PART9/machine-learning/math/mlm-summary.html">
+            
+                <a href="../PART9/machine-learning/math/mlm-summary.html">
+            
+                    
+                    01 机器学习中的数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2" data-path="../PART9/machine-learning/algorithms/mla-summary.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla-summary.html">
+            
+                    
+                    02 机器学习中的算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1.2.1" data-path="../PART9/machine-learning/algorithms/mla01-linear-regression.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla01-linear-regression.html">
+            
+                    
+                    线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.2" data-path="../PART9/machine-learning/algorithms/mla02-logistic-regression.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla02-logistic-regression.html">
+            
+                    
+                    逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.3" data-path="../PART9/machine-learning/algorithms/mla03-k-nearest-neighbor.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla03-k-nearest-neighbor.html">
+            
+                    
+                    K最邻近法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.4" data-path="../PART9/machine-learning/algorithms/mla04-naive-bayesian.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla04-naive-bayesian.html">
+            
+                    
+                    朴素贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.5" data-path="../PART9/machine-learning/algorithms/mla05-decision-tree.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla05-decision-tree.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.6" data-path="../PART9/machine-learning/algorithms/mla06-support-vector-machine.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla06-support-vector-machine.html">
+            
+                    
+                    支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.7" data-path="../PART9/machine-learning/algorithms/mla07-k-means-clustering.html">
+            
+                <a href="../PART9/machine-learning/algorithms/mla07-k-means-clustering.html">
+            
+                    
+                    k-Means
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="../PART9/deep-learning/deep-learning-summary.html">
+            
+                <a href="../PART9/deep-learning/deep-learning-summary.html">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.1" >
+            
+                <span>
+            
+                    
+                    TensorFlow
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.1.1" data-path="../PART9/deep-learning/tensorflow/tensorflow-01-env-install-set-build.html">
+            
+                <a href="../PART9/deep-learning/tensorflow/tensorflow-01-env-install-set-build.html">
+            
+                    
+                    01 环境安装与搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2.2" >
+            
+                <span>
+            
+                    
+                    Keras
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.2.1" data-path="../PART9/deep-learning/keras/keras-01-env-install-set-build.html">
+            
+                <a href="../PART9/deep-learning/keras/keras-01-env-install-set-build.html">
+            
+                    
+                    01 环境安装与搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.3" >
+            
+                <span>
+            
+                    
+                    NLP自然语言处理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.4" >
+            
+                <span>
+            
+                    
+                    CV计算机视觉
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="../PART10/part10-summary.html">
+            
+                <a href="../PART10/part10-summary.html">
+            
+                    
+                    PART 10 区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.11.1" >
+            
+                <span>
+            
+                    
+                    比特币实战
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="../PART11/part11-summary.html">
+            
+                <a href="../PART11/part11-summary.html">
+            
+                    
+                    PART 11 系统架构之道
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.12.1" data-path="../PART11/part11-summary.html">
+            
+                <a href="../PART11/part11-summary.html">
+            
+                    
+                    API 设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.12.1.1" data-path="../PART11/api-design/normal-api.html">
+            
+                <a href="../PART11/api-design/normal-api.html">
+            
+                    
+                    标准API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.1.2" data-path="../PART11/api-design/restful-api.html">
+            
+                <a href="../PART11/api-design/restful-api.html">
+            
+                    
+                    RESTful风格API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.1.3" data-path="../PART11/api-design/save-api.html">
+            
+                <a href="../PART11/api-design/save-api.html">
+            
+                    
+                    安全的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JDK8</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;"><b>1. </b>&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#optional"><b>2. </b>Optional</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9A;&#x4E49;"><b>2.1. </b>&#x5B9A;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x5199;&#x6CD5;&#x793A;&#x4F8B;"><b>2.2. </b>&#x5199;&#x6CD5;&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#lambda"><b>3. </b>Lambda</a></li><ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;&#x5F15;&#x7528;"><b>3.1. </b>&#x65B9;&#x6CD5;&#x5F15;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x51FD;&#x6570;&#x63A5;&#x53E3;"><b>3.2. </b>&#x51FD;&#x6570;&#x63A5;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#comparator"><b>3.2.1. </b>Comparator</a></li></ul><li><span class="title-icon "></span><a href="#&#x6D41;&#x5904;&#x7406;&#x65B9;&#x6CD5;"><b>3.3. </b>&#x6D41;&#x5904;&#x7406;&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#map"><b>3.3.1. </b>map</a></li><li><span class="title-icon "></span><a href="#max&#x3001;min&#x3001;count"><b>3.3.2. </b>max&#x3001;min&#x3001;count</a></li><li><span class="title-icon "></span><a href="#reduce"><b>3.3.3. </b>reduce</a></li><li><span class="title-icon "></span><a href="#filter&#x3001;sorted"><b>3.3.4. </b>filter&#x3001;sorted</a></li><li><span class="title-icon "></span><a href="#collect"><b>3.3.5. </b>collect</a></li></ul><li><span class="title-icon "></span><a href="#&#x65B0;&#x7248;date-time-api-jsr-310"><b>3.4. </b>&#x65B0;&#x7248;Date-Time API (JSR 310)</a></li></ul></ul></div><a href="#&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;"><a name="&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;</h1>
+<h1 id="optional"><a name="optional" class="anchor-navigation-ex-anchor" href="#optional"><i class="fa fa-link" aria-hidden="true"></i></a>2. Optional</h1>
+<p><em>Optional</em> &#x7C7B;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x6CDB;&#x578B;&#x7C7B;&#x578B;&#x4E3A; <em>T</em> &#x7684;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x4EC5;&#x4EC5;&#x4FDD;&#x5B58; <em>null</em> &#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x4E0E;&#x6D41;&#x6216;&#x5176;&#x5B83;&#x8FD4;&#x56DE; <em>Optional</em> &#x7684;&#x65B9;&#x6CD5;&#x7ED3;&#x5408;&#xFF0C;&#x4EE3;&#x66FF;&#x4F20;&#x7EDF;&#x7684; <em>if-else</em> &#x8FDB;&#x884C; <em>null</em> &#x503C;&#x5224;&#x65AD;&#xFF0C;&#x4F18;&#x96C5;&#x7684;&#x89E3;&#x51B3;<code>NullPointException</code> &#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x6784;&#x5EFA;&#x6D41;&#x7545;&#x7684;API&#x3002;</p>
+<h2 id="&#x5B9A;&#x4E49;"><a name="&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x5B9A;&#x4E49;</h2>
+<ul>
+<li><p><code>of()</code> &#x548C; <code>ofNullable()</code> &#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x5305;&#x542B;&#x503C;&#x7684; <em>Optional</em></p>
+<ul>
+<li><p><code>of()</code>&#xFF1A;&#x660E;&#x786E;&#x5BF9;&#x8C61;&#x4E0D;&#x4E3A;<em>null</em> &#x65F6;&#x4F7F;&#x7528;</p>
+</li>
+<li><p><code>ofNullable()</code>&#xFF1A;&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#x80FD;&#x662F; <em>null</em> &#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x975E; <em>null</em>  &#x65F6;&#x4F7F;&#x7528;</p>
+</li>
+</ul>
+</li>
+<li><p><code>empty()</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A; <em>Optional</em> &#x5BF9;&#x8C61;</p>
+</li>
+</ul>
+<ul>
+<li><p><code>orElse()</code> &#x548C; <code>orElseGet()</code> &#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x503C;</p>
+<ul>
+<li><p><code>orElse()</code>&#xFF1A; &#x5224;&#x65AD;value&#x4E0D;&#x4E3A; <em>null</em> &#x65F6;&#x8FD4;&#x56DE;&#x524D;&#x9762;&#x7684;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x7684;&#x53C2;&#x6570;&#x503C;</p>
+</li>
+<li><p><code>orElseGet()</code>&#xFF1A;&#x5224;&#x65AD;value&#x4E0D;&#x4E3A; <em>null</em> &#x65F6;&#x8FD4;&#x56DE;&#x524D;&#x9762;&#x7684;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x6267;&#x884C;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7684;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</p>
+</li>
+</ul>
+</li>
+<li><p><code>orElseThrow()</code> &#x5224;&#x65AD;value&#x4E3A; <em>null</em> &#x65F6;&#x8FD4;&#x56DE;&#x524D;&#x9762;&#x7684;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x5F02;&#x5E38;</p>
+</li>
+<li><p><code>map()</code> &#x548C; <code>flatMap()</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x503C;&#x8F6C;&#x6362;</p>
+</li>
+</ul>
+<ul>
+<li><code>map()</code>&#xFF1A;&#x5165;&#x53C2;&#x4E3A; <code>Function<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?</span> <span class="token attr-name">super</span> <span class="token attr-name">T,</span> <span class="token attr-name">?</span> <span class="token attr-name">extends</span> <span class="token attr-name">U</span><span class="token punctuation">&gt;</span></span></code></li>
+<li><code>flatMap()</code>&#xFF1A;&#x5165;&#x53C2;&#x4E3A;<code>Function<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?</span> <span class="token attr-name">super</span> <span class="token attr-name">T,</span> <span class="token attr-name">Optional&lt;U</span><span class="token punctuation">&gt;</span></span>&gt;</code></li>
+</ul>
+<ul>
+<li><code>isPresent()</code>&#x548C;<code>ifPresent()</code> &#x5224;&#x65AD;value&#x662F;&#x5426;&#x4E3A; <em>null</em></li>
+</ul>
+<ul>
+<li><code>isPresent()</code>&#xFF1A;&#x5224;&#x65AD;value&#x662F;&#x5426;&#x4E3A; <em>null</em>&#xFF0C;&#x5BF9;&#x5E94;&#x8FD4;&#x56DE; true/false</li>
+<li><code>ifPresent()</code>&#xFF1A;value&#x503C;&#x4E0D;&#x4E3A; <em>null</em> &#x65F6;&#xFF0C;&#x505A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;</li>
+</ul>
+<ul>
+<li><code>filter()</code> &#x63A5;&#x53D7;&#x4E00;&#x4E2A; <em>Predicate</em> &#x6765;&#x5BF9; <em>Optional</em> &#x4E2D;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF0C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x8FD4;&#x56DE;&#x539F;&#x6765;&#x7684; <em>Optional</em> &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <em>Optional.empty</em></li>
+</ul>
+<h2 id="&#x5199;&#x6CD5;&#x793A;&#x4F8B;"><a name="&#x5199;&#x6CD5;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x6CD5;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x5199;&#x6CD5;&#x793A;&#x4F8B;</h2>
+<p><strong>&#x5199;&#x6CD5;1</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x65E7;&#x5199;&#x6CD5;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>user <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// JDK8+&#x7684;&#x65B0;&#x5199;&#x6CD5;</span>
+<span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ifPresent</span><span class="token punctuation">(</span>u <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x5199;&#x6CD5;2</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x65E7;&#x5199;&#x6CD5;</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getCity</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span>  <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>user <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token class-name">Address</span> address <span class="token operator">=</span> user<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>address<span class="token punctuation">.</span><span class="token function">getCity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> address<span class="token punctuation">.</span><span class="token function">getCity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token string">&quot;user&#x5B9E;&#x4F8B;&#x53CA;&#x5176;&#x6210;&#x5458;&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x4E3A;null&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+
+<span class="token comment">// JDK8+&#x7684;&#x65B0;&#x5199;&#x6CD5;</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getCity</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+                   <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">User</span><span class="token operator">::</span><span class="token function">getAddress</span><span class="token punctuation">)</span>
+                   <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">Address</span><span class="token operator">::</span><span class="token function">getCity</span><span class="token punctuation">)</span>
+                   <span class="token punctuation">.</span><span class="token function">orElseThrow</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token string">&quot;user&#x5B9E;&#x4F8B;&#x53CA;&#x5176;&#x6210;&#x5458;&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x4E3A;null&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x5199;&#x6CD5;3</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x65E7;&#x5199;&#x6CD5;</span>
+<span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>user<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">String</span> name <span class="token operator">=</span> user<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token string">&quot;luckinjack&quot;</span><span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        user<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;anonymous&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// JDK8+&#x7684;&#x65B0;&#x5199;&#x6CD5;</span>
+<span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+                   <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>u <span class="token operator">-&gt;</span><span class="token string">&quot;luckinjack&quot;</span><span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span>u<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                   <span class="token punctuation">.</span><span class="token function">orElseGet</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                        <span class="token class-name">User</span> defaultUser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        defaultUser<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;anonymous&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword">return</span> defaultUser<span class="token punctuation">;</span>
+                   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x5199;&#x6CD5;4</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x65E7;&#x5199;&#x6CD5;</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">OrgBase</span><span class="token punctuation">&gt;</span></span> orgList <span class="token operator">=</span> orgDao<span class="token punctuation">.</span><span class="token function">selectOrgList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> temp <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">CollectionUtils</span><span class="token punctuation">.</span><span class="token function">isNotEmpty</span><span class="token punctuation">(</span>orgList<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> orgList<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">OrgBase</span> orgBase <span class="token operator">=</span> orgList<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>orgBase<span class="token punctuation">.</span><span class="token function">getOrgName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        temp <span class="token operator">=</span> orgBase<span class="token punctuation">.</span><span class="token function">getOrgName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// JDK8+&#x7684;&#x65B0;&#x5199;&#x6CD5;</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">OrgBase</span><span class="token punctuation">&gt;</span></span> orgList <span class="token operator">=</span> orgDao<span class="token punctuation">.</span><span class="token function">selectOrgList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> temp <span class="token operator">=</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span>orgList<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">flatMap</span><span class="token punctuation">(</span>list <span class="token operator">-&gt;</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">findFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token class-name">OrgBase</span><span class="token operator">::</span><span class="token function">getOrgName</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">orElse</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h1 id="lambda"><a name="lambda" class="anchor-navigation-ex-anchor" href="#lambda"><i class="fa fa-link" aria-hidden="true"></i></a>3. Lambda</h1>
+<h2 id="&#x65B9;&#x6CD5;&#x5F15;&#x7528;"><a name="&#x65B9;&#x6CD5;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x65B9;&#x6CD5;&#x5F15;&#x7528;</h2>
+<p>&#x82E5;Lambda&#x4F53;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x65B9;&#x6CD5;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>&#x65B9;&#x6CD5;&#x5F15;&#x7528;</strong>&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x662F;lambda&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x8868;&#x8FBE;&#x5F62;&#x5F0F;&#x3002;<strong>&#x65B9;&#x6CD5;&#x5F15;&#x7528;</strong> &#x4E3B;&#x8981;&#x6709;&#x4E09;&#x79CD;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF0C;&#x90FD;&#x5E26;&#x6709;&#x6807;&#x5FD7;&#x6027;&#x7684;&#x53CC;&#x5192;&#x53F7;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x88AB;&#x5F15;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x5FC5;&#x987B;&#x548C;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x4E00;&#x81F4;&#x3002;</p>
+<ol>
+<li>&#x5BF9;&#x8C61;::&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x540D;</li>
+<li>&#x7C7B;::&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x540D;</li>
+<li>&#x7C7B;::&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x540D;</li>
+</ol>
+<h2 id="&#x51FD;&#x6570;&#x63A5;&#x53E3;"><a name="&#x51FD;&#x6570;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x51FD;&#x6570;&#x63A5;&#x53E3;</h2>
+<p><code>java.lang.FunctionalInterface</code></p>
+<h3 id="comparator"><a name="comparator" class="anchor-navigation-ex-anchor" href="#comparator"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.1. Comparator</h3>
+<p>&#x4EE5;&#x4E0B;&#x9762;&#x7684;&#x5B9E;&#x4F53;&#x4E3A;&#x4F8B;&#x5B50;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test5</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Employee</span> e1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token number">9922001L</span><span class="token punctuation">,</span> <span class="token string">&quot;Ace&quot;</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">7000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Employee</span> e2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token number">5924001L</span><span class="token punctuation">,</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Employee</span> e3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token number">3924401L</span><span class="token punctuation">,</span> <span class="token string">&quot;Calvin&quot;</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">6000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Employee</span> e4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token number">3924402L</span><span class="token punctuation">,</span> <span class="token string">&quot;David&quot;</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">4000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Employee</span> e5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token number">3924403L</span><span class="token punctuation">,</span> <span class="token string">&quot;Eve&quot;</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">15000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Employee</span><span class="token punctuation">&gt;</span></span> employees <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        employees<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>e1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        employees<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>e2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        employees<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>e3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        employees<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>e4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        employees<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>e5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token annotation punctuation">@Data</span>
+    <span class="token annotation punctuation">@AllArgsConstructor</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> salary<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x2751;  &#x4F7F;&#x7528; <em>Comparator</em> &#x5916;&#x90E8;&#x6BD4;&#x8F83;&#x5668; &#x8FDB;&#x884C;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code>employees.sort((o1, o2) -&gt; o1.getName().compareTo(o2.getName()));
+
+Collections.sort(employees, (o1, o2) -&gt; o1.getName().compareTo(o2.getName()));
+</code></pre><p>&#x2751;  &#x4F7F;&#x7528;  <em>Comparator</em> &#x5185;&#x90E8;&#x6BD4;&#x8F83;&#x5668; &#x8FDB;&#x884C;&#x6392;&#x5E8F;</p>
+<ul>
+<li><p><code>Comparator.comparing</code></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x901A;&#x8FC7;lambda &#x8868;&#x8FBE;&#x5F0F;&#x5B8C;&#x6210;&#x6BD4;&#x8F83;</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span>e <span class="token operator">-&gt;</span> e<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x7528;&#x65B9;&#x6CD5;&#x5F15;&#x7528; Employee::getName &#x4EE3;&#x66FF; lambda&#x8868;&#x8FBE;&#x5F0F;</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x81EA;&#x5B9A;&#x4E49;&#x6BD4;&#x8F83;&#x5668;</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> s2<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p><code>Comparator.reversed</code></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x4F7F;&#x7528;</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reversed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x4F7F;&#x7528; Collections.reverseOrder()</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">,</span> <span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">reverseOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p><code>Comparator.nullsFirst</code></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// null&#x5143;&#x7D20;&#x6392;&#x5728;&#x96C6;&#x5408;&#x7684;&#x6700;&#x524D;&#x9762;</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">nullsFirst</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// null&#x5143;&#x7D20;&#x6392;&#x5728;&#x96C6;&#x5408;&#x7684;&#x6700;&#x540E;&#x9762;</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">nullsLast</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p><code>Comparator.thenComparing</code></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x952E;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x518D;&#x6839;&#x636E;&#x4E0B;&#x4E00;&#x4E2A;&#x952E;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getAge</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">thenComparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getSalary</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// thenComparing&#x652F;&#x6301;&#x65E0;&#x9650;&#x5D4C;&#x5957;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x6BD4;&#x8F83;&#x5668;    </span>
+employees<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token class-name">Comparator</span><span class="token punctuation">.</span><span class="token function">comparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getAge</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">thenComparing</span><span class="token punctuation">(</span><span class="token class-name">Employee</span><span class="token operator">::</span><span class="token function">getSalary</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> s2<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x6D41;&#x5904;&#x7406;&#x65B9;&#x6CD5;"><a name="&#x6D41;&#x5904;&#x7406;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x5904;&#x7406;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x6D41;&#x5904;&#x7406;&#x65B9;&#x6CD5;</h2>
+<h3 id="map"><a name="map" class="anchor-navigation-ex-anchor" href="#map"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.1. map</h3>
+<h3 id="max&#x3001;min&#x3001;count"><a name="max&#x3001;min&#x3001;count" class="anchor-navigation-ex-anchor" href="#max&#x3001;min&#x3001;count"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.2. max&#x3001;min&#x3001;count</h3>
+<h3 id="reduce"><a name="reduce" class="anchor-navigation-ex-anchor" href="#reduce"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.3. reduce</h3>
+<p><em>reduce</em> &#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4ECE;&#x4E00;&#x7EC4;&#x503C;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x503C;&#x3002;&#x5728;&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4E2D;&#x7528;&#x5230;&#x7684; <em>count</em>&#x3001;<em>min</em> &#x548C; <em>max</em> &#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5E38;&#x7528;&#x800C;&#x88AB;&#x7EB3;&#x5165;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x90FD;&#x662F; <em>reduce</em> &#x64CD;&#x4F5C;</p>
+<h3 id="filter&#x3001;sorted"><a name="filter&#x3001;sorted" class="anchor-navigation-ex-anchor" href="#filter&#x3001;sorted"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.4. filter&#x3001;sorted</h3>
+<h3 id="collect"><a name="collect" class="anchor-navigation-ex-anchor" href="#collect"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.5. collect</h3>
+<p><code>java.util.stream.Collectors</code></p>
+<h4 id="&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x96C6;&#x5408;"><a name="&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x96C6;&#x5408;" class="anchor-navigation-ex-anchor" href="#&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x96C6;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x96C6;&#x5408;</h4>
+<ul>
+<li><code>Collectors.toList()</code>&#x3001;<code>Collectors.toSet()</code><ul>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x5B9E;&#x73B0;&#x7C7B; <code>ArrayList</code>&#x3001;<code>LinkedList</code>&#x3001;<code>CopyOnWriteArrayList</code>&#x53BB;&#x6536;&#x96C6;</li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x5C06;&#x6240;&#x6709;&#x5143;&#x7D20;&#x8F6C;&#x6362;&#x4E3A; List&#xFF0C;&#x6709;&#x987A;&#x5E8F;</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;Java&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Python&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Go&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Java&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> listResult <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> linkedListResult <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toCollection</span><span class="token punctuation">(</span><span class="token class-name">LinkedList</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> copyOnWriteArrayListResult <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toCollection</span><span class="token punctuation">(</span><span class="token class-name">CopyOnWriteArrayList</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+listResult<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+linkedListResult<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+copyOnWriteArrayListResult<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x5C06;&#x6240;&#x6709;&#x5143;&#x7D20;&#x8F6C;&#x6362;&#x4E3A; Set&#xFF0C;&#x5220;&#x9664;&#x91CD;&#x590D;&#x9879;&#xFF0C;&#x65E0;&#x987A;&#x5E8F;</span>
+<span class="token class-name">Stream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> language <span class="token operator">=</span> <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">&quot;Java&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Python&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Go&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Java&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> setResult <span class="token operator">=</span> language<span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+setResult<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li><p><code>Collectors.toMap()</code></p>
+<ul>
+<li>&#x5141;&#x8BB8;key&#x4E3A;null&#xFF0C;&#x4F46;&#x4E0D;&#x5141;&#x8BB8;value&#x7684;&#x503C;&#x4E3A;null</li>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x6307;&#x5B9A;&#x7684;Map&#x5B9E;&#x73B0;&#x7C7B; <code>HashMap</code>&#x3001;<code>LinkedHashMap</code> &#x7B49;&#x53BB;&#x6536;&#x96C6;</li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x4E0D;&#x5141;&#x8BB8;key&#x503C;&#x91CD;&#x590D;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519; `IllegalStateException: Duplicate key`</span>
+userList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toMap</span><span class="token punctuation">(</span><span class="token class-name">User</span><span class="token operator">::</span><span class="token function">getKey</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token operator">::</span><span class="token function">getValue</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">// &#x5141;&#x8BB8;key&#x503C;&#x91CD;&#x590D;&#xFF0C;&#x5982;&#x679C;key&#x503C;&#x91CD;&#x590D;&#xFF0C;&#x5C31;&#x7528;&#x540E;&#x9762;&#x7684;&#x503C;&#x8986;&#x76D6;&#xFF08;&#x5373;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x503C;&#xFF09;</span>
+userList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toMap</span><span class="token punctuation">(</span><span class="token class-name">User</span><span class="token operator">::</span><span class="token function">getKey</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token operator">::</span><span class="token function">getValue</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>key1<span class="token punctuation">,</span>key2<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> key2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><strong>[!TIP]</strong>
+map&#x7684;value&#x503C;&#x4E3A;null&#x7684;&#x65F6;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;NullPointerException&#x5F02;&#x5E38;</p>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ol>
+<li><p>&#x8BBE;&#x503C;&#x65F6;&#x52A0;&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x679C;&#x662F;null&#xFF0C;&#x6539;&#x4E3A;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x503C;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> collect <span class="token operator">=</span> userStream<span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toMap</span><span class="token punctuation">(</span><span class="token class-name">User</span><span class="token operator">::</span><span class="token function">getKey</span><span class="token punctuation">,</span> user <span class="token operator">-&gt;</span> user<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> user<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>&#x4F7F;&#x7528;<code>collect(Supplier<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>R</span><span class="token punctuation">&gt;</span></span> supplier, BiConsumer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>R,</span> <span class="token attr-name">?</span> <span class="token attr-name">super</span> <span class="token attr-name">T</span><span class="token punctuation">&gt;</span></span> accumulator, BiConsumer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>R,</span> <span class="token attr-name">R</span><span class="token punctuation">&gt;</span></span> combiner)</code>&#x6765;&#x6784;&#x5EFA;&#xFF0C;&#x5141;&#x8BB8;value&#x7684;&#x503C;&#x4E3A;null</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> userStream<span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">HashMap</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>n<span class="token punctuation">,</span> v<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> n<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> v<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">HashMap</span><span class="token operator">::</span><span class="token function">putAll</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>&#x4F7F;&#x7528;<code>Optional<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>T</span><span class="token punctuation">&gt;</span></span></code>&#x5BF9;&#x503C;&#x8FDB;&#x884C;&#x5305;&#x88C5;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Optional</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> userStream<span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toMap</span><span class="token punctuation">(</span><span class="token class-name">User</span><span class="token operator">::</span><span class="token function">getKey</span><span class="token punctuation">,</span> user <span class="token operator">-&gt;</span> <span class="token class-name">Optional</span><span class="token punctuation">.</span><span class="token function">ofNullable</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Integer</span> age <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElse</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+</blockquote>
+<h4 id="&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x503C;"><a name="&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x503C;</h4>
+<h4 id="&#x6570;&#x636E;&#x5206;&#x5757;"><a name="&#x6570;&#x636E;&#x5206;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5206;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5206;&#x5757;</h4>
+<ul>
+<li><code>Collectors.partitioningBy</code></li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;Java&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Python&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Go&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Java&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x4F7F;&#x7528;Predicate&#x5BF9;&#x8C61;&#x7684;&#x5224;&#x65AD;&#x7ED3;&#x679C;&#xFF08;true &#x6216; false&#xFF09;&#xFF0C;&#x5206;&#x7C7B;&#x6210;&#x4E00;&#x4E2A;key&#x4E3A; true &#x548C; false &#x7684;Map</span>
+<span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">partitioningBy</span><span class="token punctuation">(</span>s <span class="token operator">-&gt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x6570;&#x636E;&#x5206;&#x7EC4;"><a name="&#x6570;&#x636E;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5206;&#x7EC4;</h4>
+<ul>
+<li><code>Collectors.groupingBy</code></li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Language</span> language1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Language</span><span class="token punctuation">(</span><span class="token string">&quot;front&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Language</span> language2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Language</span><span class="token punctuation">(</span><span class="token string">&quot;front&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;React&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Language</span> language3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Language</span><span class="token punctuation">(</span><span class="token string">&quot;back&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Java&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Language</span> language4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Language</span><span class="token punctuation">(</span><span class="token string">&quot;back&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Python&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 1. &#x6309;&#x7167;&#x5C5E;&#x6027;&#x5206;&#x7EC4;&#xFF0C;&#x7528;&#x539F;&#x6709;&#x5C5E;&#x6027;&#x6536;&#x96C6;</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> groupedMap1 <span class="token operator">=</span> languageList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">groupingBy</span><span class="token punctuation">(</span><span class="token class-name">Language</span><span class="token operator">::</span><span class="token function">getType</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 2. &#x8BA1;&#x6570;&#x7B49;&#x7EDF;&#x8BA1;&#x7C7B;&#x64CD;&#x4F5C;</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Long</span><span class="token punctuation">&gt;</span></span> groupedMap2 <span class="token operator">=</span> languageList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">groupingBy</span><span class="token punctuation">(</span><span class="token class-name">Language</span><span class="token operator">::</span><span class="token function">getType</span><span class="token punctuation">,</span> <span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">counting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 3. &#x6309;&#x7167;&#x4E0D;&#x540C;&#x6761;&#x4EF6;&#x5206;&#x7EC4;</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> groupedMap3 <span class="token operator">=</span> languageList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">groupingBy</span><span class="token punctuation">(</span>item <span class="token operator">-&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&quot;back&quot;</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;back-end&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;front-end&quot;</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 4. &#x628A;&#x6536;&#x96C6;&#x5668;&#x7684;&#x7ED3;&#x679C;&#x8F6C;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x79CD;&#x7C7B;&#x578B;</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Set</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> groupedMap4 <span class="token operator">=</span> languageList<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">groupingBy</span><span class="token punctuation">(</span><span class="token class-name">Language</span><span class="token operator">::</span><span class="token function">getType</span><span class="token punctuation">,</span> <span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">mapping</span><span class="token punctuation">(</span><span class="token class-name">Language</span><span class="token operator">::</span><span class="token function">getName</span><span class="token punctuation">,</span> <span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// {back=[Test.Language(type=back, name=Java), Test.Language(type=back, name=Python), front=[Test.Language(type=front, name=Vue), Test.Language(type=front, name=React)]}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>groupedMap1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// {back=2, front=2}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>groupedMap2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// {back-end=[Test.Language(type=back, name=Java), Test.Language(type=back, name=Python), front-end=[Test.Language(type=front, name=Vue), Test.Language(type=front, name=React)]}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>groupedMap3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// {back=[Java, Python], front=[Vue, React]}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>groupedMap4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Data</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Language</span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> type<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token class-name">Language</span><span class="token punctuation">(</span><span class="token class-name">String</span> type<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;</h4>
+<ul>
+<li><code>Collectors.joining</code></li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;Java&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Python&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Go&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;Java&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x76F4;&#x63A5;&#x5C06;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x62FC;&#x63A5;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">joining</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x6BCF;&#x4E2A;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E4B;&#x95F4;&#x52A0;&#x62FC;&#x63A5;&#x7B26;&#x53F7;&#x201C;|&#x201D;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">joining</span><span class="token punctuation">(</span><span class="token string">&quot; , &quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x5F00;&#x59CB;&#x5934;&#x4E3A;Start--&#xFF0C;&#x7ED3;&#x5C3E;&#x4E3A;--End&#xFF0C;&#x4E2D;&#x95F4;&#x7528;&#x62FC;&#x63A5;&#x7B26;&#x53F7;&#x201C;||&#x201D;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">joining</span><span class="token punctuation">(</span><span class="token string">&quot; | &quot;</span><span class="token punctuation">,</span> <span class="token string">&quot; [ &quot;</span><span class="token punctuation">,</span> <span class="token string">&quot; ] &quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x6536;&#x96C6;&#x5668;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x6536;&#x96C6;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x6536;&#x96C6;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5B9A;&#x4E49;&#x6536;&#x96C6;&#x5668;</h4>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x6536;&#x96C6;&#x5668;&#x7684;&#x63A5;&#x53E3;&#x662F;<code>Collector<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>T,</span> <span class="token attr-name">A,</span> <span class="token attr-name">R</span><span class="token punctuation">&gt;</span></span></code>&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x770B;&#x4E0B;&#x6E90;&#x7801;&#x3002;</p>
+<pre class="language-"><code class="lang-java">    <span class="token comment">/**
+     *  1. Collector&lt;T, A, R&gt; &#x4E2D;&#x7684; T A R &#x5206;&#x522B;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF1F;
+     *  T&#xFF1A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5F85;&#x6536;&#x96C6;&#x7684;&#x5143;&#x7D20;&#x7C7B;&#x578B;
+     *  A&#xFF1A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x7D2F;&#x52A0;&#x5668;&#x7684;&#x7C7B;&#x578B;
+     *  R&#xFF1A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x7C7B;&#x578B;
+     *
+     *  2.Collector&lt;T, A, R&gt; &#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x7528;&#x5230;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF; &#x5206;&#x522B;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#xFF1F;
+     *  Supplier&lt;A&gt; supplier()&#xFF1A;                     &#x5BB9;&#x5668;&#x7684;&#x63D0;&#x4F9B;&#x8005;
+     *  BiConsumer&lt;A, T&gt; accumulator()&#xFF1A;             &#x7D2F;&#x52A0;&#x64CD;&#x4F5C;
+     *  BinaryOperator&lt;A&gt; combiner()&#xFF1A;               &#x5E76;&#x53D1;&#x7684;&#x60C5;&#x51B5;&#x5C06;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x4E2D;&#x95F4;&#x5BB9;&#x5668;A&#x5408;&#x5E76;
+     *  Function&lt;A, R&gt; finisher()&#xFF1A;                  &#x7EC8;&#x6B62;&#x64CD;&#x4F5C;
+     *  Set&lt;Characteristics&gt; characteristics()&#xFF1A;     &#x6536;&#x96C6;&#x5668;&#x7279;&#x6027;&#xFF08;&#x503C;&#x4E3A;IDENTITY_FINISH&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;A&#x5F3A;&#x8F6C;&#x4E3A;R&#xFF09;                                            
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token class-name">A</span><span class="token punctuation">,</span> <span class="token class-name">R</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">Collector</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token class-name">A</span><span class="token punctuation">,</span> <span class="token class-name">R</span><span class="token punctuation">&gt;</span></span> <span class="token function">of</span><span class="token punctuation">(</span><span class="token class-name">Supplier</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">A</span><span class="token punctuation">&gt;</span></span> supplier<span class="token punctuation">,</span>
+                                                 <span class="token class-name">BiConsumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">A</span><span class="token punctuation">,</span> <span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> accumulator<span class="token punctuation">,</span>
+                                                 <span class="token class-name">BinaryOperator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">A</span><span class="token punctuation">&gt;</span></span> combiner<span class="token punctuation">,</span>
+                                                 <span class="token class-name">Function</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">A</span><span class="token punctuation">,</span> <span class="token class-name">R</span><span class="token punctuation">&gt;</span></span> finisher<span class="token punctuation">,</span>
+                                                 <span class="token class-name">Characteristics</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> characteristics<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">requireNonNull</span><span class="token punctuation">(</span>supplier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">requireNonNull</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">requireNonNull</span><span class="token punctuation">(</span>combiner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">requireNonNull</span><span class="token punctuation">(</span>finisher<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">requireNonNull</span><span class="token punctuation">(</span>characteristics<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Characteristics</span><span class="token punctuation">&gt;</span></span> cs <span class="token operator">=</span> <span class="token class-name">Collectors</span><span class="token punctuation">.</span>CH_NOID<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>characteristics<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cs <span class="token operator">=</span> <span class="token class-name">EnumSet</span><span class="token punctuation">.</span><span class="token function">noneOf</span><span class="token punctuation">(</span><span class="token class-name">Characteristics</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">addAll</span><span class="token punctuation">(</span>cs<span class="token punctuation">,</span> characteristics<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            cs <span class="token operator">=</span> <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">unmodifiableSet</span><span class="token punctuation">(</span>cs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Collectors<span class="token punctuation">.</span>CollectorImpl</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>supplier<span class="token punctuation">,</span> accumulator<span class="token punctuation">,</span> combiner<span class="token punctuation">,</span> finisher<span class="token punctuation">,</span> cs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token keyword">enum</span> <span class="token class-name">Characteristics</span> <span class="token punctuation">{</span>
+        <span class="token comment">/**
+         * &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6536;&#x96C6;&#x5668;&#x88AB;&#x6807;&#x8BB0;&#x4E3A; CONCURRENT &#x7279;&#x6027;&#xFF0C;&#x90A3;&#x4E48; accumulator &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x88AB;&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;&#x7684;&#x7684;&#x8C03;&#x7528;&#xFF0C;
+         * &#x5E76;&#x4E14;&#x53EA;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;A.&#x5982;&#x679C;&#x6536;&#x96C6;&#x5668;&#x88AB;&#x6807;&#x8BB0;&#x4E3A; CONCURRENT &#xFF0C;&#x4F46;&#x662F;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x96C6;&#x5408;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x90A3;&#x4E48;
+         * &#x6700;&#x7EC8;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x539F;&#x6765;&#x7684;&#x987A;&#x5E8F;
+         */</span>
+        CONCURRENT<span class="token punctuation">,</span>
+
+        <span class="token comment">/**
+         * &#x9002;&#x7528;&#x4E8E;&#x65E0;&#x5E8F;&#x7684;&#x96C6;&#x5408;
+         */</span>
+        UNORDERED<span class="token punctuation">,</span>
+
+        <span class="token comment">/**
+         * &#x5982;&#x679C;&#x6536;&#x96C6;&#x5668;&#x7279;&#x6027;&#x88AB;&#x8BBE;&#x7F6E; IDENTITY_FINISH &#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x5F3A;&#x5236;&#x5C06;&#x4E2D;&#x95F4;&#x5BB9;&#x5668;A&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x7ED3;&#x679C;&#x7C7B;&#x578B;R
+         */</span>
+        IDENTITY_FINISH
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8981;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x6536;&#x96C6;&#x5668;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;</p>
+<ol>
+<li>&#x5B9E;&#x73B0;&#x63A5;&#x53E3;<code>java.util.stream.Collector<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>T,</span> <span class="token attr-name">A,</span> <span class="token attr-name">R</span><span class="token punctuation">&gt;</span></span></code>&#xFF0C;&#x91CD;&#x5199;&#x5E76;&#x5B9E;&#x73B0;&#x4E94;&#x4E2A;&#x6210;&#x5458;&#x65B9;&#x6CD5;&#xFF1A;<code>supplier()</code>&#x3001;<code>accumulator()</code>&#x3001;<code>combiner()</code>&#x3001;<code>finisher()</code>&#x3001;<code>characteristics()</code>&#x3002;</li>
+</ol>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LanguageCollector</span> <span class="token keyword">implements</span> <span class="token class-name">Collector</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Supplier</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">supplier</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">ArrayList</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">BiConsumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Set</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">,</span> <span class="token class-name">Language</span><span class="token punctuation">&gt;</span></span> <span class="token function">accumulator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>set<span class="token punctuation">,</span> language<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Predicate</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span></span> languagePredicate <span class="token operator">=</span> s <span class="token operator">-&gt;</span> s<span class="token punctuation">.</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>language<span class="token punctuation">.</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">boolean</span> b <span class="token operator">=</span> set<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">noneMatch</span><span class="token punctuation">(</span>languagePredicate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                language<span class="token punctuation">.</span><span class="token function">setType</span><span class="token punctuation">(</span><span class="token string">&quot;UNKNOW&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            set<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>languagePredicate<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>s <span class="token operator">-&gt;</span> s<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span>language<span class="token punctuation">.</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> s<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">BinaryOperator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">combiner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Function</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Language</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">finisher</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Function</span><span class="token punctuation">.</span><span class="token function">identity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Collector<span class="token punctuation">.</span>Characteristics</span><span class="token punctuation">&gt;</span></span> <span class="token function">characteristics</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">EnumSet</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token class-name">Characteristics</span><span class="token punctuation">.</span>IDENTITY_FINISH<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<ol>
+<li>&#x76F4;&#x63A5;&#x8C03;&#x7528; JDK &#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;<code>Collector.of()</code>&#xFF0C;&#x7B80;&#x6D01;&#x660E;&#x4E86;&#x3002;</li>
+</ol>
+<pre class="language-"><code class="lang-java"><span class="token comment">// 1. &#x5BF9;&#x5E94;&#x4F20;&#x5165;&#x4E94;&#x4E2A;&#x6210;&#x5458;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;</span>
+<span class="token class-name">Collector</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Employee</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Employee</span><span class="token punctuation">&gt;</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Employee</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> employeeCollector <span class="token operator">=</span> <span class="token class-name">Collector</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">// &#x8BA1;&#x7B97;&#x903B;&#x8F91;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token class-name">Function</span><span class="token punctuation">.</span><span class="token function">identity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">Collector<span class="token punctuation">.</span>Characteristics</span><span class="token punctuation">.</span>IDENTITY_FINISH<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 2. &#x5F53; A &#x548C; R &#x662F;&#x540C;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x7B80;&#x5316;(&#x5C11;&#x4F20;&#x4E24;&#x4E2A;&#x53C2;&#x6570;)</span>
+<span class="token class-name">Collector</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Employee</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Employee</span><span class="token punctuation">&gt;</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Employee</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> employeeCollector2 <span class="token operator">=</span> <span class="token class-name">Collector</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">// &#x8BA1;&#x7B97;&#x903B;&#x8F91;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x65B0;&#x7248;date-time-api-jsr-310"><a name="&#x65B0;&#x7248;date-time-api-jsr-310" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x7248;date-time-api-jsr-310"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. &#x65B0;&#x7248;Date-Time API (JSR 310)</h2>
+<blockquote>
+<p><strong>[!Warning]</strong>
+<strong>&#x65E7;&#x7248;Date-Time API&#x7684;&#x95EE;&#x9898;</strong>&#xFF1A;</p>
+<p><strong>1.</strong> &#x975E;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;</p>
+<p>java.util.Date &#x662F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x65E5;&#x671F;&#x7C7B;&#x90FD;&#x53EF;&#x53D8;&#xFF0C;&#x540C;&#x65F6;&#x65F6;&#x95F4;&#x65E5;&#x671F;&#x683C;&#x5F0F;&#x5316;&#x5DE5;&#x5177;SimpleDateFormat&#x4E5F;&#x662F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x8FD9;&#x662F;Java&#x65E5;&#x671F;&#x7C7B;&#x6700;&#x5927;&#x7684;&#x95EE;&#x9898;&#x4E4B;&#x4E00;&#x3002;</p>
+<p><strong>2.</strong> &#x8BBE;&#x8BA1;&#x5F88;&#x5DEE;</p>
+<p>Java&#x7684;&#x65E5;&#x671F;/&#x65F6;&#x95F4;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x5E76;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5728;java.util&#x548C;java.sql&#x7684;&#x5305;&#x4E2D;&#x90FD;&#x6709;&#x65E5;&#x671F;&#x7C7B;&#xFF0C;&#x6B64;&#x5916;&#x7528;&#x4E8E;&#x683C;&#x5F0F;&#x5316;&#x548C;&#x89E3;&#x6790;&#x7684;&#x7C7B;&#x5728;java.text&#x5305;&#x4E2D;&#x5B9A;&#x4E49;&#x3002;
+java.util.Date&#x540C;&#x65F6;&#x5305;&#x542B;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#xFF0C;&#x800C;java.sql.Date&#x4EC5;&#x5305;&#x542B;&#x65E5;&#x671F;&#xFF0C;&#x5C06;&#x5176;&#x7EB3;&#x5165;java.sql&#x5305;&#x5E76;&#x4E0D;&#x5408;&#x7406;&#x3002;&#x53E6;&#x5916;&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x90FD;&#x6709;&#x76F8;&#x540C;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x8FD9;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7CDF;&#x7CD5;&#x7684;&#x8BBE;&#x8BA1;&#x3002;
+java.util.Date&#x4E2D;&#xFF0C;&#x83B7;&#x53D6;&#x7684;&#x5E74;&#x4EFD;&#x5C45;&#x7136;&#x51CF;&#x53BB;&#x4E86;1900&#xFF0C;&#x800C;&#x4E14;&#x83B7;&#x53D6;&#x7684;&#x6708;&#x4EFD;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;</p>
+<p><strong>3.</strong> &#x65E0;&#x6CD5;&#x5904;&#x7406;&#x65F6;&#x533A;</p>
+<p>&#x7531;&#x4E8E;&#x65E5;&#x671F;&#x7C7B;&#x5E76;&#x4E0D;&#x63D0;&#x4F9B;&#x56FD;&#x9645;&#x5316;&#xFF0C;&#x56E0;&#x6B64;Java&#x5F15;&#x5165;&#x4E86;java.util.Calendar&#x548C;java.util.TimeZone&#x7C7B;&#xFF0C;&#x4F46;&#x4ED6;&#x4EEC;&#x540C;&#x6837;&#x5B58;&#x5728;&#x7C7B;&#x4F3C;&#x7684;&#x6240;&#x6709;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982;Calendar&#x4F9D;&#x65E7;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x8BE5;&#x7C7B;&#x5728;&#x8BED;&#x4E49;&#x4E0A;&#x4E5F;&#x5B8C;&#x5168;&#x4E0D;&#x7B26;&#x5408;&#x65E5;&#x671F;/&#x65F6;&#x95F4;&#x7684;&#x542B;&#x4E49;&#x3002;</p>
+</blockquote>
+<p>java8&#x5728;java.time&#x5305;&#x4E0B;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x65B0;&#x7684;API&#x3002;</p>
+<p><strong>&#x65B0;&#x589E;&#x5185;&#x5BB9;&#xFF1A;</strong></p>
+<ul>
+<li><p>Local(&#x672C;&#x5730;)&#xFF1A;&#x7B80;&#x5316;&#x4E86;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x6CA1;&#x6709;&#x65F6;&#x533A;&#x7684;&#x95EE;&#x9898;</p>
+</li>
+<li><p>Zoned(&#x65F6;&#x533A;)&#xFF1A;&#x901A;&#x8FC7;&#x5236;&#x5B9A;&#x7684;&#x65F6;&#x533A;&#x5904;&#x7406;&#x65E5;&#x671F;&#x65F6;&#x95F4;</p>
+</li>
+<li><p>Instant&#xFF1A;&#x65F6;&#x95F4;&#x6233;</p>
+</li>
+<li><p>LocalDate&#xFF1A;&#x5B58;&#x50A8;&#x4E0D;&#x5305;&#x542B;&#x65F6;&#x95F4;&#x7684;&#x65E5;&#x671F;&#xFF0C;&#x6BD4;&#x5982;2020-01-11</p>
+</li>
+<li><p>LocalTime&#xFF1A;&#x5B58;&#x50A8;&#x4E0D;&#x5305;&#x542B;&#x65E5;&#x671F;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x6BD4;&#x5982;11:07:03.580</p>
+</li>
+<li><p>LocalDateTime&#xFF1A;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; LocalDate + LocalDateTime</p>
+</li>
+<li><p>ZonedDateTime&#xFF1A;&#x5904;&#x7406;&#x5E26;&#x65F6;&#x533A;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;</p>
+</li>
+<li><p>Duration/Period&#xFF1A;&#x65F6;&#x95F4;&#x6BB5;/&#x65E5;&#x671F;&#x6BB5;&#xFF0C;&#x524D;&#x8005;&#x652F;&#x6301;&#x57FA;&#x4E8E;LocalDateTime&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x540E;&#x8005;&#x652F;&#x6301;&#x57FA;&#x4E8E;LocalDate&#x521D;&#x59CB;&#x5316;</p>
+<ul>
+<li>&#x4E24;&#x8005;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#xFF0C;&#x7236;&#x63A5;&#x53E3;&#x90FD;&#x662F;TemporalAmount&#x3002;</li>
+<li>&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x662F;&#xFF1A;<ul>
+<li>Duration&#x7684;&#x5355;&#x4F4D;&#x662F;&#x79D2;&#x7EA7;&#x548C;&#x7EB3;&#x79D2;&#xFF0C;&#x4F7F;&#x7528;&#x4E8E;&#x65F6;&#x95F4;&#x7CBE;&#x5EA6;&#x8981;&#x6C42;&#x6BD4;&#x8F83;&#x9AD8;&#x7684;&#x60C5;&#x51B5;&#xFF1B;</li>
+<li>Period&#x7684;&#x5355;&#x4F4D;&#x662F;year, month &#x548C;day</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token comment">// 1.1 &#x7528;Instant&#x521B;&#x5EFA;Duration</span>
+<span class="token class-name">Instant</span> start1 <span class="token operator">=</span> <span class="token class-name">Instant</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&quot;2021-05-11T17:14:30.00Z&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Instant</span> end1 <span class="token operator">=</span> <span class="token class-name">Instant</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">&quot;2021-06-01T18:00:30.12Z&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Duration</span> duration1 <span class="token operator">=</span> <span class="token class-name">Duration</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start1<span class="token punctuation">,</span> end1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>duration1<span class="token punctuation">.</span><span class="token function">getSeconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// &#x8F93;&#x51FA; 1817160</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>duration1<span class="token punctuation">.</span><span class="token function">getNano</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// &#x8F93;&#x51FA; 120000000</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>duration1<span class="token punctuation">.</span><span class="token function">getUnits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// &#x8F93;&#x51FA; [Seconds, Nanos]</span>
+
+<span class="token comment">// 1.2 &#x7528;LocalTime&#x521B;&#x5EFA;Duration</span>
+<span class="token class-name">LocalTime</span> start2 <span class="token operator">=</span> <span class="token class-name">LocalTime</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">1314</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">LocalTime</span> end2 <span class="token operator">=</span> <span class="token class-name">LocalTime</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">27</span><span class="token punctuation">,</span> <span class="token number">1516</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Duration</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start2<span class="token punctuation">,</span> end2<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSeconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// &#x8F93;&#x51FA; 34202</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Duration</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start2<span class="token punctuation">,</span> end2<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getNano</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// &#x8F93;&#x51FA; 202</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Duration</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start2<span class="token punctuation">,</span> end2<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getUnits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// &#x8F93;&#x51FA; [Seconds, Nanos]</span>
+
+<span class="token comment">// 2 &#x7528;LocalDate&#x521B;&#x5EFA;Period</span>
+<span class="token class-name">LocalDate</span> start3 <span class="token operator">=</span> <span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">2020</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">LocalDate</span> end3 <span class="token operator">=</span> <span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">2021</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Period</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start3<span class="token punctuation">,</span> end3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getYears</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// &#x8F93;&#x51FA; 1</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Period</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start3<span class="token punctuation">,</span> end3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMonths</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// &#x8F93;&#x51FA; 0</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Period</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start3<span class="token punctuation">,</span> end3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDays</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// &#x8F93;&#x51FA; 2</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Period</span><span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>start3<span class="token punctuation">,</span> end3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getUnits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// &#x8F93;&#x51FA; [Years, Months, Days]</span>
+</code></pre>
+<ul>
+<li><code>ChronoUnit</code>&#xFF1A;&#x57FA;&#x4E8E;Duration&#x5B9E;&#x73B0;&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x65F6;&#x95F4;&#x5355;&#x4F4D;&#xFF0C;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;between&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x7684;&#x5DEE;&#x503C;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token class-name">LocalDate</span> startDate <span class="token operator">=</span> <span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">2020</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">LocalDate</span> endDate <span class="token operator">=</span> <span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">2021</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> years <span class="token operator">=</span> <span class="token class-name">ChronoUnit</span><span class="token punctuation">.</span>YEARS<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>startDate<span class="token punctuation">,</span> endDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> months <span class="token operator">=</span> <span class="token class-name">ChronoUnit</span><span class="token punctuation">.</span>MONTHS<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>startDate<span class="token punctuation">,</span> endDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> weeks <span class="token operator">=</span> <span class="token class-name">ChronoUnit</span><span class="token punctuation">.</span>WEEKS<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>startDate<span class="token punctuation">,</span> endDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> days <span class="token operator">=</span> <span class="token class-name">ChronoUnit</span><span class="token punctuation">.</span>DAYS<span class="token punctuation">.</span><span class="token function">between</span><span class="token punctuation">(</span>startDate<span class="token punctuation">,</span> endDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>years<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x8F93;&#x51FA; 0</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>months<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x8F93;&#x51FA; 11</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>weeks<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x8F93;&#x51FA; 48</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>days<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x8F93;&#x51FA; 336</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<ul>
+<li>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x65E5;&#x671F;&#x683C;&#x5F0F;&#x5316;&#x7C7B;&#xFF1A;<code>DateTimeFormatter</code></li>
+</ul>
+<p>&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x53EF;&#x901A;&#x8FC7;<code>LocalDateTime</code>&#x7684;format&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>DateTimeFormatter</code>&#x9884;&#x7F6E;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>DateTimeFormatter.ofPattern</code>&#x65B9;&#x6CD5;&#x6765;&#x6307;&#x5B9A;&#x683C;&#x5F0F;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">LocalDateTime</span> dateTime <span class="token operator">=</span> <span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> str <span class="token operator">=</span> dateTime<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span>ISO_DATE<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x8F93;&#x51FA;2021-04-09</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+str <span class="token operator">=</span> dateTime<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x8F93;&#x51FA;2021-04-09 16:30:17</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="java-jvm.html" class="navigation navigation-prev " aria-label="Previous page: JVM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../PART3/part3-summary.html" class="navigation navigation-next " aria-label="Next page: PART 3 Python">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JDK8","level":"3.3.7","depth":2,"next":{"title":"PART 3 Python","level":"3.4","depth":1,"path":"article/PART3/part3-summary.md","ref":"./article/PART3/part3-summary.md","articles":[{"title":"基础","level":"3.4.1","depth":2,"ref":"","articles":[{"title":"Python入门（一）基础语法","level":"3.4.1.1","depth":3,"path":"article/PART3/basic/python-basic-01-basic-syntax.md","ref":"./article/PART3/basic/python-basic-01-basic-syntax.md","articles":[]}]},{"title":"工具包","level":"3.4.2","depth":2,"ref":"","articles":[{"title":"Jupyter NoteBook","level":"3.4.2.1","depth":3,"path":"article/PART3/tool-kit/python-jupyter-notebook.md","ref":"./article/PART3/tool-kit/python-jupyter-notebook.md","articles":[]},{"title":"Matplotlib","level":"3.4.2.2","depth":3,"path":"article/PART3/tool-kit/python-matplotlib.md","ref":"./article/PART3/tool-kit/python-matplotlib.md","articles":[]},{"title":"Numpy","level":"3.4.2.3","depth":3,"path":"article/PART3/tool-kit/python-numpy.md","ref":"./article/PART3/tool-kit/python-numpy.md","articles":[]},{"title":"Pandas","level":"3.4.2.4","depth":3,"path":"article/PART3/tool-kit/python-pandas.md","ref":"./article/PART3/tool-kit/python-pandas.md","articles":[]}]},{"title":"爬虫","level":"3.4.3","depth":2,"ref":"","articles":[]}]},"previous":{"title":"JVM","level":"3.3.6","depth":2,"path":"article/PART2/java-jvm.md","ref":"./article/PART2/java-jvm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","chapter-fold","hide-element","splitter","prism","flexible-alerts","page-toc-button","anchor-navigation-ex","katex","-pageview-count","-page-toc-button","-theme-comscore","-highlight","-sharing","-tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"pluginsConfig":{"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"flexible-alerts":{"style":"flat"}},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LuckinJack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LuckinJack的GitBook","language":"zh-hans","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"article/PART2/java-jdk8.md","mtime":"2021-08-10T17:43:54.198Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-16T13:30:50.523Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

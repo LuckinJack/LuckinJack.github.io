@@ -1,0 +1,2424 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据源配置：单、多与动态数据源 · LuckinJack的GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LuckinJack">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="spring-schedule.html" />
+    
+    
+    <link rel="prev" href="spring-async.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    欢迎页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../CATALOG.html">
+            
+                <a href="../../../CATALOG.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../PART0/part0-summary.html">
+            
+                <a href="../../PART0/part0-summary.html">
+            
+                    
+                    PART 0 代码根基
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    操作系统
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../PART0/code-spec/code-spec-summary.html">
+            
+                <a href="../../PART0/code-spec/code-spec-summary.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../../PART0/code-spec/java-tool-class-development-norm.html">
+            
+                <a href="../../PART0/code-spec/java-tool-class-development-norm.html">
+            
+                    
+                    Java工具类规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../PART1/part1-summary.html">
+            
+                <a href="../../PART1/part1-summary.html">
+            
+                    
+                    PART 1 开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" >
+            
+                <span>
+            
+                    
+                    IntelliJ IDEA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../../PART1/develop-tool/Intellij-idea-install.html">
+            
+                <a href="../../PART1/develop-tool/Intellij-idea-install.html">
+            
+                    
+                    IntelliJ IDEA 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    JetBrains PyCharm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../../PART1/develop-tool/Intellij-idea-install.html">
+            
+                <a href="../../PART1/develop-tool/Intellij-idea-install.html">
+            
+                    
+                    JetBrains PyCharm 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                    Maven
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
+                    SVN
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" >
+            
+                <span>
+            
+                    
+                    Git
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../PART2/part2-summary.html">
+            
+                <a href="../../PART2/part2-summary.html">
+            
+                    
+                    PART 2 Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../PART2/java-collection.html">
+            
+                <a href="../../PART2/java-collection.html">
+            
+                    
+                    容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../PART2/java-generics.html">
+            
+                <a href="../../PART2/java-generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../PART2/java-reflection.html">
+            
+                <a href="../../PART2/java-reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../../PART2/java-annotation.html">
+            
+                <a href="../../PART2/java-annotation.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../../PART2/java-concurrency.html">
+            
+                <a href="../../PART2/java-concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../../PART2/java-jvm.html">
+            
+                <a href="../../PART2/java-jvm.html">
+            
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../../PART2/java-jdk8.html">
+            
+                <a href="../../PART2/java-jdk8.html">
+            
+                    
+                    JDK8
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../PART3/part3-summary.html">
+            
+                <a href="../../PART3/part3-summary.html">
+            
+                    
+                    PART 3 Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1.1" data-path="../../PART3/basic/python-basic-01-basic-syntax.html">
+            
+                <a href="../../PART3/basic/python-basic-01-basic-syntax.html">
+            
+                    
+                    Python入门（一）基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" >
+            
+                <span>
+            
+                    
+                    工具包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.2.1" data-path="../../PART3/tool-kit/python-jupyter-notebook.html">
+            
+                <a href="../../PART3/tool-kit/python-jupyter-notebook.html">
+            
+                    
+                    Jupyter NoteBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.2" data-path="../../PART3/tool-kit/python-matplotlib.html">
+            
+                <a href="../../PART3/tool-kit/python-matplotlib.html">
+            
+                    
+                    Matplotlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.3" data-path="../../PART3/tool-kit/python-numpy.html">
+            
+                <a href="../../PART3/tool-kit/python-numpy.html">
+            
+                    
+                    Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.4" data-path="../../PART3/tool-kit/python-pandas.html">
+            
+                <a href="../../PART3/tool-kit/python-pandas.html">
+            
+                    
+                    Pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" >
+            
+                <span>
+            
+                    
+                    爬虫
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../PART4/part4-summary.html">
+            
+                <a href="../../PART4/part4-summary.html">
+            
+                    
+                    PART 4 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../../PART4/mysql/mysql-summary.html">
+            
+                <a href="../../PART4/mysql/mysql-summary.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1.1" data-path="../../PART4/mysql/mysql-00-introduce.html">
+            
+                <a href="../../PART4/mysql/mysql-00-introduce.html">
+            
+                    
+                    00 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.2" data-path="../../PART4/mysql/mysql-01-basic-operation.html">
+            
+                <a href="../../PART4/mysql/mysql-01-basic-operation.html">
+            
+                    
+                    01 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.3" data-path="../../PART4/mysql/mysql-02-commly-used-functions.html">
+            
+                <a href="../../PART4/mysql/mysql-02-commly-used-functions.html">
+            
+                    
+                    02 常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.4" data-path="../../PART4/mysql/mysql-03-query-tuning-solutions.html">
+            
+                <a href="../../PART4/mysql/mysql-03-query-tuning-solutions.html">
+            
+                    
+                    03 查询调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.5" data-path="../../PART4/mysql/mysql-04-deep-in-principles.html">
+            
+                <a href="../../PART4/mysql/mysql-04-deep-in-principles.html">
+            
+                    
+                    04 深入原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.6" data-path="../../PART4/mysql/mysql-05-advance-operation.html">
+            
+                <a href="../../PART4/mysql/mysql-05-advance-operation.html">
+            
+                    
+                    05 高级操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.7" data-path="../../PART4/mysql/mysql-06-versions-refrence.html">
+            
+                <a href="../../PART4/mysql/mysql-06-versions-refrence.html">
+            
+                    
+                    06 版本速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../part5-summary.html">
+            
+                <a href="../part5-summary.html">
+            
+                    
+                    PART 5 常用服务框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" >
+            
+                <span>
+            
+                    
+                    SpringBoot
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1.1" data-path="spring-validation.html">
+            
+                <a href="spring-validation.html">
+            
+                    
+                    Validate参数校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.1.2" data-path="spring-async.html">
+            
+                <a href="spring-async.html">
+            
+                    
+                    Async异步组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6.1.3" data-path="spring-single-multiple-dynamic-data-sources.html">
+            
+                <a href="spring-single-multiple-dynamic-data-sources.html">
+            
+                    
+                    数据源配置：单、多与动态数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.1.4" data-path="spring-schedule.html">
+            
+                <a href="spring-schedule.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.1.5" data-path="spring-transaction.html">
+            
+                <a href="spring-transaction.html">
+            
+                    
+                    Transaction事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.1.6" data-path="spring-starter.html">
+            
+                <a href="spring-starter.html">
+            
+                    
+                    自定义Starter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.1.7" data-path="spring-aop.html">
+            
+                <a href="spring-aop.html">
+            
+                    
+                    AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.1.8" data-path="spring-config.html">
+            
+                <a href="spring-config.html">
+            
+                    
+                    Config配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../springcloud/springcloud-summary.html">
+            
+                <a href="../springcloud/springcloud-summary.html">
+            
+                    
+                    SpringCloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="../springsecurity/springsecurity-summary.html">
+            
+                <a href="../springsecurity/springsecurity-summary.html">
+            
+                    
+                    SprigSecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" data-path="../mybatis/mybatis-summary.html">
+            
+                <a href="../mybatis/mybatis-summary.html">
+            
+                    
+                    Mybatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.5" data-path="../zookeeper/zookeeper-summary.html">
+            
+                <a href="../zookeeper/zookeeper-summary.html">
+            
+                    
+                    Zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../PART6/part6-summary.html">
+            
+                <a href="../../PART6/part6-summary.html">
+            
+                    
+                    PART 6 中间件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" >
+            
+                <span>
+            
+                    
+                    Kafka
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" >
+            
+                <span>
+            
+                    
+                    ElasticSearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../PART7/part7-summary.html">
+            
+                <a href="../../PART7/part7-summary.html">
+            
+                    
+                    PART 7 ETL与数仓
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" >
+            
+                <span>
+            
+                    
+                    Kettle
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="../../PART7/otter/otter-summary.html">
+            
+                <a href="../../PART7/otter/otter-summary.html">
+            
+                    
+                    Otter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.2.1" data-path="../../PART7/otter/otter-00-introduce.html">
+            
+                <a href="../../PART7/otter/otter-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.2" data-path="../../PART7/otter/otter-01-scheduling-model.html">
+            
+                <a href="../../PART7/otter/otter-01-scheduling-model.html">
+            
+                    
+                    02 调度模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.3" data-path="../../PART7/otter/otter-02-import-algorithm.html">
+            
+                <a href="../../PART7/otter/otter-02-import-algorithm.html">
+            
+                    
+                    03 调入库算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.4" data-path="../../PART7/otter/otter-03-loop-control.html">
+            
+                <a href="../../PART7/otter/otter-03-loop-control.html">
+            
+                    
+                    04 回环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.5" data-path="../../PART7/otter/otter-04-data-consistency.html">
+            
+                <a href="../../PART7/otter/otter-04-data-consistency.html">
+            
+                    
+                    05 数据一致性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.6" data-path="../../PART7/otter/otter-05-quick-start.html">
+            
+                <a href="../../PART7/otter/otter-05-quick-start.html">
+            
+                    
+                    06 快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.7" data-path="../../PART7/otter/otter-06-admin-webapp-introduce.html">
+            
+                <a href="../../PART7/otter/otter-06-admin-webapp-introduce.html">
+            
+                    
+                    07 manager运行与介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.8" data-path="../../PART7/otter/otter-07-sync-strategy-webapp-configure.html">
+            
+                <a href="../../PART7/otter/otter-07-sync-strategy-webapp-configure.html">
+            
+                    
+                    08 同步策略配置方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="../../PART7/data-warehouse/data-warehouse-summary.html">
+            
+                <a href="../../PART7/data-warehouse/data-warehouse-summary.html">
+            
+                    
+                    数据仓库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.3.1" data-path="../../PART7/data-warehouse/data-warehouse-01.html">
+            
+                <a href="../../PART7/data-warehouse/data-warehouse-01.html">
+            
+                    
+                    01 数仓入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../../PART8/part8-summary.html">
+            
+                <a href="../../PART8/part8-summary.html">
+            
+                    
+                    PART 8 大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.1" >
+            
+                <span>
+            
+                    
+                    Spark
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.2" >
+            
+                <span>
+            
+                    
+                    Yarn
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.3" data-path="../../PART8/hbase/hbase-summary.html">
+            
+                <a href="../../PART8/hbase/hbase-summary.html">
+            
+                    
+                    HBase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4" data-path="../../PART8/flink/flink-summary.html">
+            
+                <a href="../../PART8/flink/flink-summary.html">
+            
+                    
+                    Flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.4.1" data-path="../../PART8/flink/flink-01-introduction.html">
+            
+                <a href="../../PART8/flink/flink-01-introduction.html">
+            
+                    
+                    01 流处理基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.2" data-path="../../PART8/flink/flink-02-quick-start.html">
+            
+                <a href="../../PART8/flink/flink-02-quick-start.html">
+            
+                    
+                    02 快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.3" data-path="../../PART8/flink/flink-03-architecture-and-principle.html">
+            
+                <a href="../../PART8/flink/flink-03-architecture-and-principle.html">
+            
+                    
+                    03 架构与原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.4" data-path="../../PART8/flink/flink-04-data-stream-api.html">
+            
+                <a href="../../PART8/flink/flink-04-data-stream-api.html">
+            
+                    
+                    04 DataStreamAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.5" data-path="../../PART8/flink/flink-05-window&watermark.html">
+            
+                <a href="../../PART8/flink/flink-05-window&watermark.html">
+            
+                    
+                    05 Window & Watermark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.6" data-path="../../PART8/flink/flink-06-flink-sql-and-table-api.html">
+            
+                <a href="../../PART8/flink/flink-06-flink-sql-and-table-api.html">
+            
+                    
+                    06 Flink SQL & Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.7" data-path="../../PART8/flink/flink-07-flink-cluster-deployment.html">
+            
+                <a href="../../PART8/flink/flink-07-flink-cluster-deployment.html">
+            
+                    
+                    07 集群部署与应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.8" data-path="../../PART8/flink/flink-08-flink-state-manage-and-recovery.html">
+            
+                <a href="../../PART8/flink/flink-08-flink-state-manage-and-recovery.html">
+            
+                    
+                    08 状态管理与恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="../../PART9/part9-summary.html">
+            
+                <a href="../../PART9/part9-summary.html">
+            
+                    
+                    PART 9 人工智能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="../../PART9/machine-learning/machine-learning-summary.html">
+            
+                <a href="../../PART9/machine-learning/machine-learning-summary.html">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1.1" data-path="../../PART9/machine-learning/math/mlm-summary.html">
+            
+                <a href="../../PART9/machine-learning/math/mlm-summary.html">
+            
+                    
+                    01 机器学习中的数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2" data-path="../../PART9/machine-learning/algorithms/mla-summary.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla-summary.html">
+            
+                    
+                    02 机器学习中的算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1.2.1" data-path="../../PART9/machine-learning/algorithms/mla01-linear-regression.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla01-linear-regression.html">
+            
+                    
+                    线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.2" data-path="../../PART9/machine-learning/algorithms/mla02-logistic-regression.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla02-logistic-regression.html">
+            
+                    
+                    逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.3" data-path="../../PART9/machine-learning/algorithms/mla03-k-nearest-neighbor.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla03-k-nearest-neighbor.html">
+            
+                    
+                    K最邻近法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.4" data-path="../../PART9/machine-learning/algorithms/mla04-naive-bayesian.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla04-naive-bayesian.html">
+            
+                    
+                    朴素贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.5" data-path="../../PART9/machine-learning/algorithms/mla05-decision-tree.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla05-decision-tree.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.6" data-path="../../PART9/machine-learning/algorithms/mla06-support-vector-machine.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla06-support-vector-machine.html">
+            
+                    
+                    支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.7" data-path="../../PART9/machine-learning/algorithms/mla07-k-means-clustering.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla07-k-means-clustering.html">
+            
+                    
+                    k-Means
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="../../PART9/deep-learning/deep-learning-summary.html">
+            
+                <a href="../../PART9/deep-learning/deep-learning-summary.html">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.1" >
+            
+                <span>
+            
+                    
+                    TensorFlow
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.1.1" data-path="../../PART9/deep-learning/tensorflow/tensorflow-01-env-install-set-build.html">
+            
+                <a href="../../PART9/deep-learning/tensorflow/tensorflow-01-env-install-set-build.html">
+            
+                    
+                    01 环境安装与搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2.2" >
+            
+                <span>
+            
+                    
+                    Keras
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.2.1" data-path="../../PART9/deep-learning/keras/keras-01-env-install-set-build.html">
+            
+                <a href="../../PART9/deep-learning/keras/keras-01-env-install-set-build.html">
+            
+                    
+                    01 环境安装与搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.3" >
+            
+                <span>
+            
+                    
+                    NLP自然语言处理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.4" >
+            
+                <span>
+            
+                    
+                    CV计算机视觉
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="../../PART10/part10-summary.html">
+            
+                <a href="../../PART10/part10-summary.html">
+            
+                    
+                    PART 10 区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.11.1" >
+            
+                <span>
+            
+                    
+                    比特币实战
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="../../PART11/part11-summary.html">
+            
+                <a href="../../PART11/part11-summary.html">
+            
+                    
+                    PART 11 系统架构之道
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.12.1" data-path="../../PART11/part11-summary.html">
+            
+                <a href="../../PART11/part11-summary.html">
+            
+                    
+                    API 设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.12.1.1" data-path="../../PART11/api-design/normal-api.html">
+            
+                <a href="../../PART11/api-design/normal-api.html">
+            
+                    
+                    标准API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.1.2" data-path="../../PART11/api-design/restful-api.html">
+            
+                <a href="../../PART11/api-design/restful-api.html">
+            
+                    
+                    RESTful风格API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.1.3" data-path="../../PART11/api-design/save-api.html">
+            
+                <a href="../../PART11/api-design/save-api.html">
+            
+                    
+                    安全的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >数据源配置：单、多与动态数据源</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5355;&#x591A;&#x6570;&#x636E;&#x6E90;&#x3001;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x4F7F;&#x7528;&#x573A;&#x666F;"><b>1. </b>&#x5355;/&#x591A;&#x6570;&#x636E;&#x6E90;&#x3001;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x4F7F;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x5355;&#x6570;&#x636E;&#x6E90;"><b>2. </b>&#x5355;&#x6570;&#x636E;&#x6E90;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x6570;&#x636E;&#x6E90;"><b>3. </b>&#x591A;&#x6570;&#x636E;&#x6E90;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;mybatis&#x591A;&#x6570;&#x636E;&#x6E90;"><b>3.1. </b>&#x5B9E;&#x73B0;Mybatis&#x591A;&#x6570;&#x636E;&#x6E90;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;springdatajpa&#x591A;&#x6570;&#x636E;&#x6E90;"><b>3.2. </b>&#x5B9E;&#x73B0;SpringDataJPA&#x591A;&#x6570;&#x636E;&#x6E90;</a></li></ul><li><span class="title-icon "></span><a href="#&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;"><b>4. </b>&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;mybatis&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;"><b>4.1. </b>&#x5B9E;&#x73B0;Mybatis&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>5. </b>&#x53C2;&#x8003;</a></li></ul></div><a href="#&#x5355;&#x591A;&#x6570;&#x636E;&#x6E90;&#x3001;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x4F7F;&#x7528;&#x573A;&#x666F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5355;&#x591A;&#x6570;&#x636E;&#x6E90;&#x3001;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x4F7F;&#x7528;&#x573A;&#x666F;"><a name="&#x5355;&#x591A;&#x6570;&#x636E;&#x6E90;&#x3001;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x4F7F;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x591A;&#x6570;&#x636E;&#x6E90;&#x3001;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x4F7F;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5355;/&#x591A;&#x6570;&#x636E;&#x6E90;&#x3001;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x4F7F;&#x7528;&#x573A;&#x666F;</h1>
+<ul>
+<li>&#x5355;&#x6570;&#x636E;&#x6E90;</li>
+</ul>
+<ul>
+<li>&#x591A;&#x6570;&#x636E;&#x6E90;</li>
+</ul>
+<ul>
+<li>&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;</li>
+</ul>
+<h1 id="&#x5355;&#x6570;&#x636E;&#x6E90;"><a name="&#x5355;&#x6570;&#x636E;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x6570;&#x636E;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5355;&#x6570;&#x636E;&#x6E90;</h1>
+<p>&#x4F7F;&#x7528;SpringBoot&#x65F6;&#xFF0C;&#x914D;&#x7F6E;&#x5355;&#x6570;&#x636E;&#x6E90;&#x5F88;&#x5BB9;&#x6613;&#x3002;Spring Boot&#x4F1A;&#x6839;&#x636E;<code>application.yml</code>&#x7684;spring.datasource&#x7684;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x548C;<code>pom.xml</code>&#x7684;&#x6570;&#x636E;&#x5E93;&#x4F9D;&#x8D56;&#x81EA;&#x52A8;&#x4E3A;&#x6211;&#x4EEC;&#x914D;&#x7F6E;&#x597D;&#x4E00;&#x4E2A;DataSource&#x3002;</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x7684;&#x662F;Springboot&#x9ED8;&#x8BA4;&#x652F;&#x6301;4&#x79CD;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7;&#x81EA;&#x52A8;&#x914D;&#x7F6E;<code>org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration</code>&#x751F;&#x6210;&#x4E00;&#x4E2A;DataSource Bean&#x3002;</p>
+<blockquote>
+<p><strong>SpringBoot&#x76F4;&#x63A5;&#x652F;&#x6301;&#x7684;&#x7684;4&#x79CD;&#x6570;&#x636E;&#x6E90;&#x8FDE;&#x63A5;&#x6C60;&#x662F;</strong>&#xFF1A;</p>
+<ul>
+<li>org.apache.tomcat.jdbc.pool.DataSource</li>
+<li>com.zaxxer.hikari.HikariDataSource</li>
+<li>org.apache.commons.dbcp.BasicDataSource</li>
+<li>org.apache.commons.dbcp2.BasicDataSource</li>
+</ul>
+<p>&#x53E6;&#x5916;&#xFF0C;<strong>SpringBoot&#x5728;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x6E90;&#x8FDE;&#x63A5;&#x6C60;&#x4E5F;&#x4E0D;&#x540C;</strong>&#xFF1A;</p>
+<ul>
+<li>SpringBoot 1.0&#x65F6;&#x6570;&#x636E;&#x6E90;&#x8FDE;&#x63A5;&#x6C60;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x662F;tomcat&#xFF0C;2.0&#x4EE5;&#x540E;&#x6362;&#x6210;&#x4E86;Hikari</li>
+</ul>
+</blockquote>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>spring.datasource.url=jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf8
+spring.datasource.driverClassName=com.mysql.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=123456
+# &#x6307;&#x5B9A;&#x6570;&#x636E;&#x6E90;&#x7684;&#x7C7B;&#x578B;
+
+spring.datasource.type=com.zaxxer.hikari.HikariDataSource
+</code></pre><p>&#x5982;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;Springboot&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x7684;4&#x79CD;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;Druid&#x3001;c3p0&#x7B49;</p>
+<pre class="language-"><code># &#x6307;&#x5B9A;&#x7B2C;&#x4E09;&#x65B9;&#x6570;&#x636E;&#x6E90;&#x8FDE;&#x63A5;&#x6C60;
+spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+</code></pre><p>&#x65E0;&#x8BBA;&#x662F;&#x7528;&#x5B98;&#x65B9;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x6E90;&#x8FDE;&#x63A5;&#x6C60;&#x8FD8;&#x662F;&#x6307;&#x5B9A;&#x7B2C;&#x4E09;&#x65B9;&#x6570;&#x636E;&#x6E90;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x5355;&#x6570;&#x636E;&#x6E90;&#x90FD;&#x662F;&#x8D70;&#x7684;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x624B;&#x52A8;&#x5199;&#x4E00;&#x4E2A; Config&#x7C7B;&#x3002;</p>
+<h1 id="&#x591A;&#x6570;&#x636E;&#x6E90;"><a name="&#x591A;&#x6570;&#x636E;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x6570;&#x636E;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x591A;&#x6570;&#x636E;&#x6E90;</h1>
+<p>&#x968F;&#x7740;&#x4E1A;&#x52A1;&#x53D1;&#x5C55;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5F15;&#x5165;&#x591A;&#x4E2A;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x6216;&#x8005;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x62C6;&#x5206;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x5728;SpringBoot&#x4E2D;&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x3002;</p>
+<p><strong>&#x5B9E;&#x73B0;&#x8981;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<ol>
+<li>&#x591A;&#x6570;&#x636E;&#x6E90;&#x914D;&#x7F6E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x4E3B;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x4F7F;&#x7528; <code>@Primary</code> &#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#x6765;&#x533A;&#x5206;&#x4E3B;&#x6570;&#x636E;&#x6E90;&#x3002;</li>
+<li>@MapperScan &#x626B;&#x63CF; Mapper &#x63A5;&#x53E3;&#x5E76;&#x6CE8;&#x5165;&#x5230;&#x5BB9;&#x5668;&#x7BA1;&#x7406;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x6E90;&#x5FC5;&#x987B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x5305;&#x3002;</li>
+<li><code>@ConfigurationProperties(prefix = &quot;xxx&quot;)</code> &#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x626B;&#x63CF;<code>.yml</code>&#x3001;<code>.properties</code>&#x4E2D;&#x4EE5;<code>xxx</code>&#x524D;&#x7F00;&#x5F00;&#x5934;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x7701;&#x53BB;&#x5F88;&#x591A;&#x624B;&#x52A8;&#x914D;&#x7F6E;&#x7684;&#x9EBB;&#x70E6;&#x3002;</li>
+</ol>
+<h2 id="&#x5B9E;&#x73B0;mybatis&#x591A;&#x6570;&#x636E;&#x6E90;"><a name="&#x5B9E;&#x73B0;mybatis&#x591A;&#x6570;&#x636E;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;mybatis&#x591A;&#x6570;&#x636E;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x5B9E;&#x73B0;Mybatis&#x591A;&#x6570;&#x636E;&#x6E90;</h2>
+<p>&#x4E0B;&#x9762;&#x4EE5;&#x914D;&#x7F6E;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x4E3A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<ul>
+<li>&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<pre class="language-"><code>spring.datasource.primary.url=jdbc:mysql://localhost:3306/test1
+spring.datasource.primary.username=root
+spring.datasource.primary.password=123456
+spring.datasource.primary.driver-class-name=com.mysql.jdbc.Driver
+
+spring.datasource.secondary.url=jdbc:mysql://localhost:3306/test2
+spring.datasource.secondary.username=root
+spring.datasource.secondary.password=123456
+spring.datasource.secondary.driver-class-name=com.mysql.jdbc.Driver
+</code></pre><ul>
+<li>&#x4E3B;&#x6570;&#x636E;&#x6E90;&#x7684;Java Config</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@MapperScan</span><span class="token punctuation">(</span>basePackages <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;com.luckinJack.dao.primary&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>        
+            sqlSessionFactoryRef <span class="token operator">=</span> <span class="token string">&quot;primarySqlSessionFactory&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PrimaryDataSourceConfiguration</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;primaryDatasource&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@Primary</span>
+    <span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;spring.datasource.primary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSource</span> <span class="token function">primaryDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">DataSourceBuilder</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;primaryTransactionManager&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@Primary</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSourceTransactionManager</span> <span class="token function">primaryTransactionManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">DataSourceTransactionManager</span><span class="token punctuation">(</span><span class="token function">primaryDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;primarySqlSessionFactory&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@Primary</span>
+    <span class="token keyword">public</span> <span class="token class-name">SqlSessionFactory</span> <span class="token function">primarySqlSessionFactory</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;primaryDatasource&quot;</span><span class="token punctuation">)</span> <span class="token class-name">DataSource</span> primaryDataSource<span class="token punctuation">)</span>
+            <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> <span class="token class-name">SqlSessionFactoryBean</span> sessionFactory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SqlSessionFactoryBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        sessionFactory<span class="token punctuation">.</span><span class="token function">setDataSource</span><span class="token punctuation">(</span>primaryDataSource<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        sessionFactory<span class="token punctuation">.</span><span class="token function">setMapperLocations</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">PathMatchingResourcePatternResolver</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">getResources</span><span class="token punctuation">(</span><span class="token class-name">MasterDataSourceConfig</span><span class="token punctuation">.</span>MAPPER_LOCATION<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> sessionFactory<span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>&#x4ECE;&#x6570;&#x636E;&#x6E90;&#x7684;Java Config</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@MapperScan</span><span class="token punctuation">(</span>basePackages <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;com.luckinJack.dao.secondary&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>        
+            sqlSessionFactoryRef <span class="token operator">=</span> <span class="token string">&quot;secondarySqlSessionFactory&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PrimaryDataSourceConfiguration</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;secondaryDatasource&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;spring.datasource.secondary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSource</span> <span class="token function">secondaryDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">DataSourceBuilder</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;secondaryTransactionManager&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSourceTransactionManager</span> <span class="token function">clusterTransactionManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">DataSourceTransactionManager</span><span class="token punctuation">(</span><span class="token function">secondaryDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;secondarySqlSessionFactory&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">SqlSessionFactory</span> <span class="token function">secondarySqlSessionFactory</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;secondaryDataSource&quot;</span><span class="token punctuation">)</span> <span class="token class-name">DataSource</span> secondaryDataSource<span class="token punctuation">)</span>
+            <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> <span class="token class-name">SqlSessionFactoryBean</span> sessionFactory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SqlSessionFactoryBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        sessionFactory<span class="token punctuation">.</span><span class="token function">setDataSource</span><span class="token punctuation">(</span>secondaryDataSource<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        sessionFactory<span class="token punctuation">.</span><span class="token function">setMapperLocations</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">PathMatchingResourcePatternResolver</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">getResources</span><span class="token punctuation">(</span><span class="token class-name">SecondDataSourceConfig</span><span class="token punctuation">.</span>MAPPER_LOCATION<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> sessionFactory<span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x6E90;&#x914D;&#x7F6E;&#x5C31;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x53EA;&#x9700;&#x8981;&#x5C06;Mybatis&#x7684;xml&#x6587;&#x4EF6;&#x548C;DAO&#x5C42;&#x7684;&#x63A5;&#x53E3;&#x5199;&#x597D;&#xFF0C;&#x5E76;&#x5728;Service&#x5C42;&#x6CE8;&#x5165;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5C31;&#x884C;</p>
+<h2 id="&#x5B9E;&#x73B0;springdatajpa&#x591A;&#x6570;&#x636E;&#x6E90;"><a name="&#x5B9E;&#x73B0;springdatajpa&#x591A;&#x6570;&#x636E;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;springdatajpa&#x591A;&#x6570;&#x636E;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x5B9E;&#x73B0;SpringDataJPA&#x591A;&#x6570;&#x636E;&#x6E90;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x7C7B;&#xFF0C;&#x6BCF;&#x4E2A;&#x914D;&#x7F6E;&#x7C7B;&#x5206;&#x522B;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x6E90;&#x5BF9;&#x5E94;&#x7684;Entity&#x5B9E;&#x4F53;&#x548C;Repository&#x63A5;&#x53E3;&#x7684;&#x5305;&#x5730;&#x5740;&#x3002;&#x4E0B;&#x9762;&#x4EE5;&#x914D;&#x7F6E;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x4E3A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<ul>
+<li>&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<pre class="language-"><code>spring.datasource.primary.url=jdbc:mysql://localhost:3306/test1
+spring.datasource.primary.username=root
+spring.datasource.primary.password=123456
+spring.datasource.primary.driver-class-name=com.mysql.jdbc.Driver
+
+spring.datasource.secondary.url=jdbc:mysql://localhost:3306/test2
+spring.datasource.secondary.username=root
+spring.datasource.secondary.password=123456
+spring.datasource.secondary.driver-class-name=com.mysql.jdbc.Driver
+</code></pre><ul>
+<li>&#x4E3B;&#x6570;&#x636E;&#x6E90;&#x7684;JPA&#x914D;&#x7F6E;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@EnableTransactionManagement</span>
+<span class="token annotation punctuation">@EnableJpaRepositories</span><span class="token punctuation">(</span>
+        entityManagerFactoryRef<span class="token operator">=</span><span class="token string">&quot;entityManagerFactoryPrimary&quot;</span><span class="token punctuation">,</span>
+        transactionManagerRef<span class="token operator">=</span><span class="token string">&quot;transactionManagerPrimary&quot;</span><span class="token punctuation">,</span>
+        <span class="token comment">//&#x914D;&#x7F6E;Repository&#x63A5;&#x53E3;&#x6240;&#x5728;&#x4F4D;&#x7F6E;</span>
+        basePackages<span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">&quot;com.luckinjack.repository.primary&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> 
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PrimaryConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span> <span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;primaryDataSource&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">DataSource</span> primaryDataSource<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Primary</span>
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;entityManagerPrimary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">EntityManager</span> <span class="token function">entityManager</span><span class="token punctuation">(</span><span class="token class-name">EntityManagerFactoryBuilder</span> builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">entityManagerFactoryPrimary</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createEntityManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Primary</span>
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;entityManagerFactoryPrimary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">LocalContainerEntityManagerFactoryBean</span> entityManagerFactoryPrimary <span class="token punctuation">(</span><span class="token class-name">EntityManagerFactoryBuilder</span> builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> builder
+                <span class="token punctuation">.</span><span class="token function">dataSource</span><span class="token punctuation">(</span>primaryDataSource<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">properties</span><span class="token punctuation">(</span><span class="token function">getVendorProperties</span><span class="token punctuation">(</span>primaryDataSource<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token comment">//&#x914D;&#x7F6E;Entity&#x5B9E;&#x4F53;&#x6240;&#x5728;&#x4F4D;&#x7F6E;</span>
+                <span class="token punctuation">.</span><span class="token function">packages</span><span class="token punctuation">(</span><span class="token string">&quot;com.luckinjack.domain.primary&quot;</span><span class="token punctuation">)</span> 
+                <span class="token punctuation">.</span><span class="token function">persistenceUnit</span><span class="token punctuation">(</span><span class="token string">&quot;primaryPersistenceUnit&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">JpaProperties</span> jpaProperties<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token function">getVendorProperties</span><span class="token punctuation">(</span><span class="token class-name">DataSource</span> dataSource<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> jpaProperties<span class="token punctuation">.</span><span class="token function">getHibernateProperties</span><span class="token punctuation">(</span>dataSource<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Primary</span>
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;transactionManagerPrimary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">PlatformTransactionManager</span> <span class="token function">transactionManagerPrimary</span><span class="token punctuation">(</span><span class="token class-name">EntityManagerFactoryBuilder</span> builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">JpaTransactionManager</span><span class="token punctuation">(</span><span class="token function">entityManagerFactoryPrimary</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>&#x4ECE;&#x6570;&#x636E;&#x6E90;&#x7684;JPA&#x914D;&#x7F6E;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@EnableTransactionManagement</span>
+<span class="token annotation punctuation">@EnableJpaRepositories</span><span class="token punctuation">(</span>
+        entityManagerFactoryRef<span class="token operator">=</span><span class="token string">&quot;entityManagerFactorySecondary&quot;</span><span class="token punctuation">,</span>
+        transactionManagerRef<span class="token operator">=</span><span class="token string">&quot;transactionManagerSecondary&quot;</span><span class="token punctuation">,</span>
+        <span class="token comment">//&#x914D;&#x7F6E;Repository&#x63A5;&#x53E3;&#x6240;&#x5728;&#x4F4D;&#x7F6E;</span>
+        basePackages<span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">&quot;com.luckinjack.repository.secondary&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> 
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SecondaryConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span> <span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;secondaryDataSource&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">DataSource</span> secondaryDataSource<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;entityManagerSecondary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">EntityManager</span> <span class="token function">entityManager</span><span class="token punctuation">(</span><span class="token class-name">EntityManagerFactoryBuilder</span> builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">entityManagerFactorySecondary</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createEntityManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;entityManagerFactorySecondary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">LocalContainerEntityManagerFactoryBean</span> entityManagerFactorySecondary <span class="token punctuation">(</span><span class="token class-name">EntityManagerFactoryBuilder</span> builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> builder
+                <span class="token punctuation">.</span><span class="token function">dataSource</span><span class="token punctuation">(</span>secondaryDataSource<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">properties</span><span class="token punctuation">(</span><span class="token function">getVendorProperties</span><span class="token punctuation">(</span>secondaryDataSource<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token comment">//&#x914D;&#x7F6E;Entity&#x5B9E;&#x4F53;&#x6240;&#x5728;&#x4F4D;&#x7F6E;</span>
+                <span class="token punctuation">.</span><span class="token function">packages</span><span class="token punctuation">(</span><span class="token string">&quot;com.luckinjack.domain.secondary&quot;</span><span class="token punctuation">)</span> 
+                <span class="token punctuation">.</span><span class="token function">persistenceUnit</span><span class="token punctuation">(</span><span class="token string">&quot;secondaryPersistenceUnit&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">JpaProperties</span> jpaProperties<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token function">getVendorProperties</span><span class="token punctuation">(</span><span class="token class-name">DataSource</span> dataSource<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> jpaProperties<span class="token punctuation">.</span><span class="token function">getHibernateProperties</span><span class="token punctuation">(</span>dataSource<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;transactionManagerSecondary&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">PlatformTransactionManager</span> <span class="token function">transactionManagerSecondary</span><span class="token punctuation">(</span><span class="token class-name">EntityManagerFactoryBuilder</span> builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">JpaTransactionManager</span><span class="token punctuation">(</span><span class="token function">entityManagerFactorySecondary</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5206;&#x522B;&#x65B0;&#x589E;&#x4E3B;/&#x6B21;&#x6570;&#x636E;&#x6E90;&#x7684;&#x5B9E;&#x4F53;&#x3001;&#x4E3B;/&#x6B21;&#x6570;&#x636E;&#x6E90;&#x7684;repository&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;&#xFF0C;&#x5206;&#x522B;&#x653E;&#x5728;&#x5148;&#x524D;&#x914D;&#x7F6E;&#x7684;&#x5305;&#x5730;&#x5740;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x4E3B;&#x6570;&#x636E;&#x6E90;&#x7684;User&#x5B9E;&#x4F53;&#x548C;Repository&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>luckinjack<span class="token punctuation">.</span>domain<span class="token punctuation">.</span>primary</span>
+
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@Entity</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>nullable <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>nullable <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>luckinjack<span class="token punctuation">.</span>repository<span class="token punctuation">.</span>primary</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserRepository</span> <span class="token keyword">extends</span> <span class="token class-name">JpaRepository</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">,</span> <span class="token class-name">Long</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>&#x4ECE;&#x6570;&#x636E;&#x6E90;&#x7684;Article&#x5B9E;&#x4F53;&#x548C;Repository&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>luckinjack<span class="token punctuation">.</span>domain<span class="token punctuation">.</span>secondary</span>
+
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@Entity</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Article</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Id</span>
+    <span class="token annotation punctuation">@GeneratedValue</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>nullable <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> title<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>nullable <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> content<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>luckinjack<span class="token punctuation">.</span>repository<span class="token punctuation">.</span>secondary</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ArticleRepository</span> <span class="token keyword">extends</span> <span class="token class-name">JpaRepository</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Article</span><span class="token punctuation">,</span> <span class="token class-name">Long</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7528;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x9A8C;&#x8BC1;SpringDataJPA&#x591A;&#x6570;&#x636E;&#x6E90;&#x662F;&#x5426;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RunWith</span><span class="token punctuation">(</span><span class="token class-name">SpringJUnit4ClassRunner</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@SpringApplicationConfiguration</span><span class="token punctuation">(</span><span class="token class-name">Application</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ApplicationTests</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserRepository</span> userRepository<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">ArticleRepository</span> articleRepository<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+
+        userRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">&quot;aaa&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        userRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">&quot;bbb&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        userRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">&quot;ccc&quot;</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Assert</span><span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> userRepository<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        articleRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Article</span><span class="token punctuation">(</span><span class="token string">&quot;t1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        articleRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Article</span><span class="token punctuation">(</span><span class="token string">&quot;t2&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;654321&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        articleRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Article</span><span class="token punctuation">(</span><span class="token string">&quot;t3&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;135246&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Assert</span><span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> articleRepository<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;"><a name="&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;</h1>
+<p>&#x6211;&#x4EEC;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x5462;</p>
+<p>&#x5B9E;&#x73B0;&#x8981;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x901A;&#x8FC7;&#x6269;&#x5C55;Spring&#x7684;<code>AbstractRoutingDataSource</code>&#x7C7B;&#xFF0C;&#x5E76;&#x91CD;&#x5199;&#x5176;<code>determineCurrentLookupKey()</code>&#xFF0C;&#x5728;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#x5D4C;&#x5165;&#x8DEF;&#x7531;&#x903B;&#x8F91;&#xFF0C;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x3002;</li>
+<li>&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x63A5;&#x7740;&#x5C31;&#x662F;&#x5982;&#x4F55;&#x5728;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#x52A8;&#x6001;&#x5207;&#x6362;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Aspect&#x5207;&#x9762; + &#x6CE8;&#x89E3;&#xFF0C;&#x62E6;&#x622A;&#x5E26; &#x88AB;&#x6CE8;&#x89E3;&#x4FEE;&#x9970;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6E90;&#x52A8;&#x6001;&#x5207;&#x6362;&#x3002;</li>
+</ol>
+<h2 id="&#x5B9E;&#x73B0;mybatis&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;"><a name="&#x5B9E;&#x73B0;mybatis&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;mybatis&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x5B9E;&#x73B0;Mybatis&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;</h2>
+<ul>
+<li>&#x7981;&#x7528;&#x6570;&#x636E;&#x6E90;&#x9ED8;&#x8BA4;&#x81EA;&#x52A8;&#x914D;&#x7F6E;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@SpringBootApplication</span><span class="token punctuation">(</span>exclude <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token class-name">DataSourceAutoConfiguration</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">Application</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6570;&#x636E;&#x6E90;&#x9ED8;&#x8BA4;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x4F1A;&#x8BFB;&#x53D6; <code>spring.datasource.*</code> &#x7684;&#x5C5E;&#x6027;&#x6765;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x7981;&#x7528;&#x4EE5;&#x8FDB;&#x884C;&#x5B9A;&#x5236;</p>
+<ul>
+<li>&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<pre class="language-"><code>server:
+  port: 8080
+spring:
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      jdbcUrl: jdbc:mysql://127.0.0.1:3306/primary?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=utf-8
+      username: root
+      password: 123456
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      jdbcUrl: jdbc:mysql://127.0.0.1:3306/secondary?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=utf-8
+      username: root
+      password: 123456
+</code></pre><ul>
+<li>Java Config</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@MapperScan</span><span class="token punctuation">(</span>
+        <span class="token comment">// &#x914D;&#x7F6E;&#x9700;&#x8981;&#x88AB;&#x626B;&#x63CF;&#x7684;DAO&#x63A5;&#x53E3;&#x6240;&#x5728;&#x5305;&#x5730;&#x5740;</span>
+        value <span class="token operator">=</span> <span class="token string">&quot;com.luckinJack.dao&quot;</span><span class="token punctuation">,</span>
+        sqlSessionFactoryRef <span class="token operator">=</span> <span class="token string">&quot;commSessionFactory&quot;</span><span class="token punctuation">,</span>
+        sqlSessionTemplateRef <span class="token operator">=</span> <span class="token string">&quot;commSessionTemplate&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataSourceConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/**
+     * &#x5C06;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x6CE8;&#x5165;Spring IOC&#x5BB9;&#x5668;
+     *
+     * @return javax.sql.DataSource
+     * @author LuckinJack
+     * @date 2020/11/20 12:54
+     */</span>
+    <span class="token annotation punctuation">@Primary</span>
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span><span class="token string">&quot;dynamicDataSource&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSource</span> <span class="token function">dynamicDataSource</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;primaryDataSource&quot;</span><span class="token punctuation">)</span> <span class="token class-name">DataSource</span> primary<span class="token punctuation">,</span>
+                                        <span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;secondaryDataSource&quot;</span><span class="token punctuation">)</span> <span class="token class-name">DataSource</span> secondary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> targetDataSources <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        targetDataSources<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">DynamicDataSource<span class="token punctuation">.</span>DatabaseType</span><span class="token punctuation">.</span>PRIMARY<span class="token punctuation">,</span> primary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        targetDataSources<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">DynamicDataSource<span class="token punctuation">.</span>DatabaseType</span><span class="token punctuation">.</span>SECONDARY<span class="token punctuation">,</span> secondary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">DynamicDataSource</span> dataSource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DynamicDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setTargetDataSources</span><span class="token punctuation">(</span>targetDataSources<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x6E90;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setDefaultTargetDataSource</span><span class="token punctuation">(</span>primary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> dataSource<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * &#x521B;&#x5EFA;primary&#x6570;&#x636E;&#x6E90;&#x5BF9;&#x8C61;
+     *
+     * @return javax.sql.DataSource
+     * @author LuckinJack
+     * @date 2020/11/20 12:55
+     */</span>
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span><span class="token string">&quot;primaryDataSource&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;spring.datasource.primary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSource</span> <span class="token function">primary</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BasicDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * &#x521B;&#x5EFA;secondary&#x6570;&#x636E;&#x6E90;&#x5BF9;&#x8C61;
+     *
+     * @return javax.sql.DataSource
+     * @author LuckinJack
+     * @date 2020/11/20 12:55
+     */</span>
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span><span class="token string">&quot;secondaryDataSource&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;spring.datasource.secondary&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSource</span> <span class="token function">secondary</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BasicDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#x5B9E;&#x73B0;&#x7C7B;</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Slf4j</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DynamicDataSource</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractRoutingDataSource</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">ThreadLocal</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Stack</span><span class="token punctuation">&lt;</span><span class="token class-name">DatabaseType</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> DB_CONTEXT_HOLDER_STACK <span class="token operator">=</span> <span class="token class-name">ThreadLocal</span><span class="token punctuation">.</span><span class="token function">withInitial</span><span class="token punctuation">(</span><span class="token class-name">Stack</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">DatabaseType</span> <span class="token punctuation">{</span>
+        PRIMARY<span class="token punctuation">,</span> SECONDARY
+    <span class="token punctuation">}</span>
+
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token class-name">Object</span> <span class="token function">determineCurrentLookupKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * &#x5C06;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B;&#x8BBE;&#x4E3A;PRIMARY
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">supervision</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        DB_CONTEXT_HOLDER_STACK<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token class-name">DatabaseType</span><span class="token punctuation">.</span>PRIMARY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * &#x5C06;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B;&#x8BBE;&#x4E3A;SECONDARY
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">workflow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        DB_CONTEXT_HOLDER_STACK<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token class-name">DatabaseType</span><span class="token punctuation">.</span>SECONDARY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * &#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B;
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">setDatabaseType</span><span class="token punctuation">(</span><span class="token class-name">DatabaseType</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        DB_CONTEXT_HOLDER_STACK<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B;
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">DatabaseType</span> <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>DB_CONTEXT_HOLDER_STACK<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token class-name">DatabaseType</span><span class="token punctuation">.</span>PRIMARY<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">DatabaseType</span> current <span class="token operator">=</span> DB_CONTEXT_HOLDER_STACK<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> current<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * &#x79FB;&#x9664;
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>DB_CONTEXT_HOLDER_STACK<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            DB_CONTEXT_HOLDER_STACK<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>&#x6CE8;&#x89E3;&#x5F0F;&#x6570;&#x636E;&#x6E90;</li>
+</ul>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6CE8;&#x89E3; <code>@DataSource</code>&#xFF0C;&#x6211;&#x4EEC;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>@DataSource(value = &apos;&#x4F60;&#x60F3;&#x5207;&#x6362;&#x5230;&#x7684;&#x6570;&#x636E;&#x6E90;&apos;)</code>&#xFF0C;&#x6807;&#x8BB0;&#x5F53;&#x524D;&#x60F3;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x6E90;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Target</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token class-name">ElementType</span><span class="token punctuation">.</span>METHOD<span class="token punctuation">,</span> <span class="token class-name">ElementType</span><span class="token punctuation">.</span>TYPE<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Retention</span><span class="token punctuation">(</span><span class="token class-name">RetentionPolicy</span><span class="token punctuation">.</span>RUNTIME<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Documented</span>
+<span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> <span class="token class-name">DataSource</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/**
+     * &#x6570;&#x636E;&#x6E90;&#x7684;&#x503C;
+     *
+     * @author LuckinJack
+     * @date 2020/11/20 12:57
+     */</span>
+    <span class="token class-name">DynamicDataSource<span class="token punctuation">.</span>DatabaseType</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span> defalut <span class="token class-name">DynamicDataSource<span class="token punctuation">.</span>DatabaseType</span><span class="token punctuation">.</span>PRIMARY<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>Spring AOP&#x5B9E;&#x73B0;&#x591A;&#x6570;&#x636E;&#x6E90;&#x5207;&#x6362;</li>
+</ul>
+<p>&#x62E6;&#x622A;&#x5E26; <code>@DataSource</code> &#x6CE8;&#x89E3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x524D;&#x5207;&#x6362;&#x81F3;&#x76EE;&#x6807;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x6062;&#x590D;&#x5230;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x6E90;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * &#x6570;&#x636E;&#x6E90;&#x5207;&#x6362;&#x5207;&#x9762;
+ *
+ * @author LuckinJack
+ * @date 2020/11/20
+ */</span>
+<span class="token annotation punctuation">@Aspect</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@Order</span><span class="token punctuation">(</span><span class="token class-name">Ordered</span><span class="token punctuation">.</span>LOWEST_PRECEDENCE<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataSourceAspect</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Pointcut</span><span class="token punctuation">(</span><span class="token string">&quot;@annotation(com.luckinjack.annotation.DataSource)&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">switchDatasourcePointcut</span><span class="token punctuation">(</span><span class="token class-name">JoinPoint</span> point<span class="token punctuation">,</span> <span class="token class-name">DataSource</span> dataSource<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token annotation punctuation">@Before</span><span class="token punctuation">(</span><span class="token string">&quot;switchDatasourcePointcut()&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setDataSource</span><span class="token punctuation">(</span><span class="token class-name">JoinPoint</span> point<span class="token punctuation">,</span> <span class="token class-name">DataSource</span> dataSource<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">DynamicDataSource</span><span class="token punctuation">.</span><span class="token function">setDatabaseType</span><span class="token punctuation">(</span>XXXX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token annotation punctuation">@After</span><span class="token punctuation">(</span><span class="token string">&quot;switchDatasourcePointcut()&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">releaseSDataSource</span><span class="token punctuation">(</span><span class="token class-name">JoinPoint</span> point<span class="token punctuation">,</span> <span class="token class-name">DataSource</span> dataSource<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">DynamicDataSource</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x53C2;&#x8003;</h1>
+<ul>
+<li><p><a href="https://www.cnblogs.com/nxzblogs/p/11849797.html" target="_blank">SpringBoot&#x591A;&#x6570;&#x636E;&#x6E90;&amp;&#x52A8;&#x6001;&#x6570;&#x636E;&#x6E90;&#xFF08;&#x4E3B;&#x4ECE;&#xFF09;</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_31142553/article/details/84661355" target="_blank">Spring AOP&#x5B9E;&#x73B0;&#x591A;&#x6570;&#x636E;&#x6E90;&#x5207;&#x6362;</a></p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="spring-async.html" class="navigation navigation-prev " aria-label="Previous page: Async异步组件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="spring-schedule.html" class="navigation navigation-next " aria-label="Next page: 定时任务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据源配置：单、多与动态数据源","level":"3.6.1.3","depth":3,"next":{"title":"定时任务","level":"3.6.1.4","depth":3,"path":"article/PART5/springboot/spring-schedule.md","ref":"./article/PART5/springboot/spring-schedule.md","articles":[]},"previous":{"title":"Async异步组件","level":"3.6.1.2","depth":3,"path":"article/PART5/springboot/spring-async.md","ref":"./article/PART5/springboot/spring-async.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","chapter-fold","hide-element","splitter","prism","flexible-alerts","page-toc-button","anchor-navigation-ex","katex","-pageview-count","-page-toc-button","-theme-comscore","-highlight","-sharing","-tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"pluginsConfig":{"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"flexible-alerts":{"style":"flat"}},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LuckinJack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LuckinJack的GitBook","language":"zh-hans","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"article/PART5/springboot/spring-single-multiple-dynamic-data-sources.md","mtime":"2021-03-22T14:52:33.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-20T16:12:47.592Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2597 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>02 常用函数 · LuckinJack的GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LuckinJack">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mysql-03-query-tuning-solutions.html" />
+    
+    
+    <link rel="prev" href="mysql-01-basic-operation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    欢迎页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../CATALOG.html">
+            
+                <a href="../../../CATALOG.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../PART0/part0-summary.html">
+            
+                <a href="../../PART0/part0-summary.html">
+            
+                    
+                    PART 0 学术研究
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    操作系统
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                    计算机网络
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../PART0/advanced-mathematics/am-summary.html">
+            
+                <a href="../../PART0/advanced-mathematics/am-summary.html">
+            
+                    
+                    高等数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../../PART0/advanced-mathematics/am01-unctional-limit-and-continuity.html">
+            
+                <a href="../../PART0/advanced-mathematics/am01-unctional-limit-and-continuity.html">
+            
+                    
+                    01 函数、极限、连续
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../../PART0/advanced-mathematics/am02-single-variable-differential-calculus.html">
+            
+                <a href="../../PART0/advanced-mathematics/am02-single-variable-differential-calculus.html">
+            
+                    
+                    02 一元函数微分学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="../../PART0/advanced-mathematics/am03-single-variable-integral-calculus.html">
+            
+                <a href="../../PART0/advanced-mathematics/am03-single-variable-integral-calculus.html">
+            
+                    
+                    03 一元函数积分学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.4" data-path="../../PART0/advanced-mathematics/am04-calculus-of-polynomial-function.html">
+            
+                <a href="../../PART0/advanced-mathematics/am04-calculus-of-polynomial-function.html">
+            
+                    
+                    04 多元函数微积分学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.5" data-path="../../PART0/advanced-mathematics/am05-ordinary-differential-equation.html">
+            
+                <a href="../../PART0/advanced-mathematics/am05-ordinary-differential-equation.html">
+            
+                    
+                    05 常微分方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../PART0/linear-algebra/la-summary.html">
+            
+                <a href="../../PART0/linear-algebra/la-summary.html">
+            
+                    
+                    线性代数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../../PART0/linear-algebra/la-01-determinant.html">
+            
+                <a href="../../PART0/linear-algebra/la-01-determinant.html">
+            
+                    
+                    01 行列式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.2" data-path="../../PART0/linear-algebra/la-02-matrix.html">
+            
+                <a href="../../PART0/linear-algebra/la-02-matrix.html">
+            
+                    
+                    02 矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.3" data-path="../../PART0/linear-algebra/la-03-vector.html">
+            
+                <a href="../../PART0/linear-algebra/la-03-vector.html">
+            
+                    
+                    03 向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.4" data-path="../../PART0/linear-algebra/la-04-linear-equation-system.html">
+            
+                <a href="../../PART0/linear-algebra/la-04-linear-equation-system.html">
+            
+                    
+                    04 线性方程组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.5" data-path="../../PART0/linear-algebra/la-05-eigenvalue&eigenvector&similarity-matrix.html">
+            
+                <a href="../../PART0/linear-algebra/la-05-eigenvalue&eigenvector&similarity-matrix.html">
+            
+                    
+                    05 特征值&特征向量&相似矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.6" data-path="../../PART0/linear-algebra/la-06-quadratic-form.html">
+            
+                <a href="../../PART0/linear-algebra/la-06-quadratic-form.html">
+            
+                    
+                    06 二次型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../../PART0/code-spec/code-spec-summary.html">
+            
+                <a href="../../PART0/code-spec/code-spec-summary.html">
+            
+                    
+                    编码规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../../PART0/code-spec/java-tool-class-development-norm.html">
+            
+                <a href="../../PART0/code-spec/java-tool-class-development-norm.html">
+            
+                    
+                    Java工具类规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../PART1/part1-summary.html">
+            
+                <a href="../../PART1/part1-summary.html">
+            
+                    
+                    PART 1 开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../PART1/idea/IntelliJ-idea-summary.html">
+            
+                <a href="../../PART1/idea/IntelliJ-idea-summary.html">
+            
+                    
+                    IntelliJ IDEA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../../PART1/idea/IntelliJ-idea-00-introduce.html">
+            
+                <a href="../../PART1/idea/IntelliJ-idea-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" data-path="../../PART1/idea/IntelliJ-idea-01-install.html">
+            
+                <a href="../../PART1/idea/IntelliJ-idea-01-install.html">
+            
+                    
+                    02 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    JetBrains PyCharm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../../PART1/pycharm/Intellij-idea-install.md">
+            
+                <span>
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.2" data-path="../../PART1/pycharm/Intellij-idea-install.md">
+            
+                <span>
+            
+                    
+                    02 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                    Maven
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
+                    SVN
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../PART1/git/git-summary.html">
+            
+                <a href="../../PART1/git/git-summary.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.5.1" data-path="../../PART1/git/git-00-introduce.html">
+            
+                <a href="../../PART1/git/git-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5.2" data-path="../../PART1/git/git-01-install&config.html">
+            
+                <a href="../../PART1/git/git-01-install&config.html">
+            
+                    
+                    02 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5.3" data-path="../../PART1/git/git-02-commonly-used-commands.html">
+            
+                <a href="../../PART1/git/git-02-commonly-used-commands.html">
+            
+                    
+                    03 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../PART2/part2-summary.html">
+            
+                <a href="../../PART2/part2-summary.html">
+            
+                    
+                    PART 2 Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../PART2/java-collection.html">
+            
+                <a href="../../PART2/java-collection.html">
+            
+                    
+                    容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../PART2/java-generics.html">
+            
+                <a href="../../PART2/java-generics.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../PART2/java-reflection.html">
+            
+                <a href="../../PART2/java-reflection.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../../PART2/java-annotation.html">
+            
+                <a href="../../PART2/java-annotation.html">
+            
+                    
+                    注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../../PART2/java-concurrency.html">
+            
+                <a href="../../PART2/java-concurrency.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../../PART2/java-jvm.html">
+            
+                <a href="../../PART2/java-jvm.html">
+            
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../../PART2/java-jdk8.html">
+            
+                <a href="../../PART2/java-jdk8.html">
+            
+                    
+                    JDK8
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../PART3/part3-summary.html">
+            
+                <a href="../../PART3/part3-summary.html">
+            
+                    
+                    PART 3 Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1.1" data-path="../../PART3/basic/python-basic-01-basic-syntax.html">
+            
+                <a href="../../PART3/basic/python-basic-01-basic-syntax.html">
+            
+                    
+                    Python入门（一）基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" >
+            
+                <span>
+            
+                    
+                    工具包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.2.1" data-path="../../PART3/tool-kit/python-jupyter-notebook.html">
+            
+                <a href="../../PART3/tool-kit/python-jupyter-notebook.html">
+            
+                    
+                    Jupyter NoteBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.2" data-path="../../PART3/tool-kit/python-matplotlib.html">
+            
+                <a href="../../PART3/tool-kit/python-matplotlib.html">
+            
+                    
+                    Matplotlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.3" data-path="../../PART3/tool-kit/python-numpy.html">
+            
+                <a href="../../PART3/tool-kit/python-numpy.html">
+            
+                    
+                    Numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.4" data-path="../../PART3/tool-kit/python-pandas.html">
+            
+                <a href="../../PART3/tool-kit/python-pandas.html">
+            
+                    
+                    Pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" >
+            
+                <span>
+            
+                    
+                    爬虫
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../part4-summary.html">
+            
+                <a href="../part4-summary.html">
+            
+                    
+                    PART 4 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="mysql-summary.html">
+            
+                <a href="mysql-summary.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1.1" data-path="mysql-00-introduce.html">
+            
+                <a href="mysql-00-introduce.html">
+            
+                    
+                    00 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.2" data-path="mysql-01-basic-operation.html">
+            
+                <a href="mysql-01-basic-operation.html">
+            
+                    
+                    01 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5.1.3" data-path="mysql-02-commly-used-functions.html">
+            
+                <a href="mysql-02-commly-used-functions.html">
+            
+                    
+                    02 常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.4" data-path="mysql-03-query-tuning-solutions.html">
+            
+                <a href="mysql-03-query-tuning-solutions.html">
+            
+                    
+                    03 查询调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.5" data-path="mysql-04-deep-in-principles.html">
+            
+                <a href="mysql-04-deep-in-principles.html">
+            
+                    
+                    04 深入原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.6" data-path="mysql-05-advance-operation.html">
+            
+                <a href="mysql-05-advance-operation.html">
+            
+                    
+                    05 高级操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.7" data-path="mysql-06-versions-refrence.html">
+            
+                <a href="mysql-06-versions-refrence.html">
+            
+                    
+                    06 版本速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../PART5/part5-summary.html">
+            
+                <a href="../../PART5/part5-summary.html">
+            
+                    
+                    PART 5 常用服务框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../../PART5/spring/spring-summary.html">
+            
+                <a href="../../PART5/spring/spring-summary.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1.1" data-path="../../PART5/spring/spring-00-introduce.html">
+            
+                <a href="../../PART5/spring/spring-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../../PART5/springboot/springboot-summary.html">
+            
+                <a href="../../PART5/springboot/springboot-summary.html">
+            
+                    
+                    SpringBoot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.2.1" data-path="../../PART5/springboot/spring-00-introduce.md">
+            
+                <span>
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.2" data-path="../../PART5/springboot/spring-validation.html">
+            
+                <a href="../../PART5/springboot/spring-validation.html">
+            
+                    
+                    Validate参数校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.3" data-path="../../PART5/springboot/spring-async.html">
+            
+                <a href="../../PART5/springboot/spring-async.html">
+            
+                    
+                    Async异步组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.4" data-path="../../PART5/springboot/spring-single-multiple-dynamic-data-sources.md">
+            
+                <span>
+            
+                    
+                    数据源配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.5" data-path="../../PART5/springboot/spring-schedule.html">
+            
+                <a href="../../PART5/springboot/spring-schedule.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.6" data-path="../../PART5/springboot/spring-transaction.html">
+            
+                <a href="../../PART5/springboot/spring-transaction.html">
+            
+                    
+                    Transaction事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.7" data-path="../../PART5/springboot/spring-starter.md">
+            
+                <span>
+            
+                    
+                    自定义Starter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.8" data-path="../../PART5/springboot/spring-aop.html">
+            
+                <a href="../../PART5/springboot/spring-aop.html">
+            
+                    
+                    AOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.9" data-path="../../PART5/springboot/spring-config.html">
+            
+                <a href="../../PART5/springboot/spring-config.html">
+            
+                    
+                    Config配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="../../PART5/springcloud/springcloud-summary.html">
+            
+                <a href="../../PART5/springcloud/springcloud-summary.html">
+            
+                    
+                    SpringCloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" data-path="../../PART5/springsecurity/springsecurity-summary.html">
+            
+                <a href="../../PART5/springsecurity/springsecurity-summary.html">
+            
+                    
+                    SprigSecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.5" data-path="../../PART5/mybatis/mybatis-summary.html">
+            
+                <a href="../../PART5/mybatis/mybatis-summary.html">
+            
+                    
+                    Mybatis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.5.1" data-path="../../PART5/mybatis/mybatis-00-introduce.html">
+            
+                <a href="../../PART5/mybatis/mybatis-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6" data-path="../../PART5/zookeeper/zookeeper-summary.html">
+            
+                <a href="../../PART5/zookeeper/zookeeper-summary.html">
+            
+                    
+                    Zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.6.1" data-path="../../PART5/zookeeper/zookeeper-00-introduce.html">
+            
+                <a href="../../PART5/zookeeper/zookeeper-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6.2" data-path="../../PART5/zookeeper/zookeeper-01-install&config.html">
+            
+                <a href="../../PART5/zookeeper/zookeeper-01-install&config.html">
+            
+                    
+                    02 安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6.3" data-path="../../PART5/zookeeper/zookeeper-02-commonly-used-commands.html">
+            
+                <a href="../../PART5/zookeeper/zookeeper-02-commonly-used-commands.html">
+            
+                    
+                    03 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.6.4" data-path="../../PART5/zookeeper/zookeeper-03-core-principles.html">
+            
+                <a href="../../PART5/zookeeper/zookeeper-03-core-principles.html">
+            
+                    
+                    04 核心原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../PART6/part6-summary.html">
+            
+                <a href="../../PART6/part6-summary.html">
+            
+                    
+                    PART 6 中间件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" >
+            
+                <span>
+            
+                    
+                    Kafka
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" >
+            
+                <span>
+            
+                    
+                    ElasticSearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.3" data-path="../../PART6/nginx/nginx-summary.html">
+            
+                <a href="../../PART6/nginx/nginx-summary.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.3.1" data-path="../../PART6/nginx/nginx-00-introduce.html">
+            
+                <a href="../../PART6/nginx/nginx-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../PART7/part7-summary.html">
+            
+                <a href="../../PART7/part7-summary.html">
+            
+                    
+                    PART 7 ETL与数仓
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" >
+            
+                <span>
+            
+                    
+                    Kettle
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="../../PART7/otter/otter-summary.html">
+            
+                <a href="../../PART7/otter/otter-summary.html">
+            
+                    
+                    Otter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.2.1" data-path="../../PART7/otter/otter-00-introduce.html">
+            
+                <a href="../../PART7/otter/otter-00-introduce.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.2" data-path="../../PART7/otter/otter-01-scheduling-model.html">
+            
+                <a href="../../PART7/otter/otter-01-scheduling-model.html">
+            
+                    
+                    02 调度模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.3" data-path="../../PART7/otter/otter-02-import-algorithm.html">
+            
+                <a href="../../PART7/otter/otter-02-import-algorithm.html">
+            
+                    
+                    03 调入库算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.4" data-path="../../PART7/otter/otter-03-loop-control.html">
+            
+                <a href="../../PART7/otter/otter-03-loop-control.html">
+            
+                    
+                    04 回环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.5" data-path="../../PART7/otter/otter-04-data-consistency.html">
+            
+                <a href="../../PART7/otter/otter-04-data-consistency.html">
+            
+                    
+                    05 数据一致性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.6" data-path="../../PART7/otter/otter-05-quick-start.html">
+            
+                <a href="../../PART7/otter/otter-05-quick-start.html">
+            
+                    
+                    06 快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.7" data-path="../../PART7/otter/otter-06-admin-webapp-introduce.html">
+            
+                <a href="../../PART7/otter/otter-06-admin-webapp-introduce.html">
+            
+                    
+                    07 manager运行与介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2.8" data-path="../../PART7/otter/otter-07-sync-strategy-webapp-configure.html">
+            
+                <a href="../../PART7/otter/otter-07-sync-strategy-webapp-configure.html">
+            
+                    
+                    08 同步策略配置方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="../../PART7/data-warehouse/data-warehouse-summary.html">
+            
+                <a href="../../PART7/data-warehouse/data-warehouse-summary.html">
+            
+                    
+                    数据仓库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.3.1" data-path="../../PART7/data-warehouse/data-warehouse-01.html">
+            
+                <a href="../../PART7/data-warehouse/data-warehouse-01.html">
+            
+                    
+                    01 数仓入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../../PART8/part8-summary.html">
+            
+                <a href="../../PART8/part8-summary.html">
+            
+                    
+                    PART 8 大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.1" >
+            
+                <span>
+            
+                    
+                    Spark
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.2" >
+            
+                <span>
+            
+                    
+                    Yarn
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.3" data-path="../../PART8/hbase/hbase-summary.html">
+            
+                <a href="../../PART8/hbase/hbase-summary.html">
+            
+                    
+                    HBase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4" data-path="../../PART8/flink/flink-summary.html">
+            
+                <a href="../../PART8/flink/flink-summary.html">
+            
+                    
+                    Flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.4.1" data-path="../../PART8/flink/flink-01-introduction.html">
+            
+                <a href="../../PART8/flink/flink-01-introduction.html">
+            
+                    
+                    01 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.2" data-path="../../PART8/flink/flink-02-quick-start.html">
+            
+                <a href="../../PART8/flink/flink-02-quick-start.html">
+            
+                    
+                    02 快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.3" data-path="../../PART8/flink/flink-03-architecture-and-principle.html">
+            
+                <a href="../../PART8/flink/flink-03-architecture-and-principle.html">
+            
+                    
+                    03 架构与原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.4" data-path="../../PART8/flink/flink-04-data-stream-api.html">
+            
+                <a href="../../PART8/flink/flink-04-data-stream-api.html">
+            
+                    
+                    04 DataStreamAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.5" data-path="../../PART8/flink/flink-05-window&watermark.html">
+            
+                <a href="../../PART8/flink/flink-05-window&watermark.html">
+            
+                    
+                    05 Window & Watermark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.6" data-path="../../PART8/flink/flink-06-flink-sql-and-table-api.html">
+            
+                <a href="../../PART8/flink/flink-06-flink-sql-and-table-api.html">
+            
+                    
+                    06 Flink SQL & Table API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.7" data-path="../../PART8/flink/flink-07-flink-cluster-deployment.html">
+            
+                <a href="../../PART8/flink/flink-07-flink-cluster-deployment.html">
+            
+                    
+                    07 集群部署与应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9.4.8" data-path="../../PART8/flink/flink-08-flink-state-manage-and-recovery.html">
+            
+                <a href="../../PART8/flink/flink-08-flink-state-manage-and-recovery.html">
+            
+                    
+                    08 状态管理与恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="../../PART9/part9-summary.html">
+            
+                <a href="../../PART9/part9-summary.html">
+            
+                    
+                    PART 9 人工智能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="../../PART9/machine-learning/machine-learning-summary.html">
+            
+                <a href="../../PART9/machine-learning/machine-learning-summary.html">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1.1" data-path="../../PART9/machine-learning/math/mlm-summary.html">
+            
+                <a href="../../PART9/machine-learning/math/mlm-summary.html">
+            
+                    
+                    01 机器学习中的数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2" data-path="../../PART9/machine-learning/algorithms/mla-summary.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla-summary.html">
+            
+                    
+                    02 机器学习中的算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1.2.1" data-path="../../PART9/machine-learning/algorithms/mla01-linear-regression.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla01-linear-regression.html">
+            
+                    
+                    线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.2" data-path="../../PART9/machine-learning/algorithms/mla02-logistic-regression.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla02-logistic-regression.html">
+            
+                    
+                    逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.3" data-path="../../PART9/machine-learning/algorithms/mla03-k-nearest-neighbor.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla03-k-nearest-neighbor.html">
+            
+                    
+                    K最邻近法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.4" data-path="../../PART9/machine-learning/algorithms/mla04-naive-bayesian.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla04-naive-bayesian.html">
+            
+                    
+                    朴素贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.5" data-path="../../PART9/machine-learning/algorithms/mla05-decision-tree.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla05-decision-tree.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.6" data-path="../../PART9/machine-learning/algorithms/mla06-support-vector-machine.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla06-support-vector-machine.html">
+            
+                    
+                    支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.1.2.7" data-path="../../PART9/machine-learning/algorithms/mla07-k-means-clustering.html">
+            
+                <a href="../../PART9/machine-learning/algorithms/mla07-k-means-clustering.html">
+            
+                    
+                    k-Means
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="../../PART9/deep-learning/deep-learning-summary.html">
+            
+                <a href="../../PART9/deep-learning/deep-learning-summary.html">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.1" >
+            
+                <span>
+            
+                    
+                    TensorFlow
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.1.1" data-path="../../PART9/deep-learning/tensorflow/tensorflow-01-env-install-set-build.html">
+            
+                <a href="../../PART9/deep-learning/tensorflow/tensorflow-01-env-install-set-build.html">
+            
+                    
+                    01 环境安装与搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2.2" >
+            
+                <span>
+            
+                    
+                    Keras
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.2.2.1" data-path="../../PART9/deep-learning/keras/keras-01-env-install-set-build.html">
+            
+                <a href="../../PART9/deep-learning/keras/keras-01-env-install-set-build.html">
+            
+                    
+                    01 环境安装与搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.3" >
+            
+                <span>
+            
+                    
+                    NLP自然语言处理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.4" >
+            
+                <span>
+            
+                    
+                    CV计算机视觉
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="../../PART10/part10-summary.html">
+            
+                <a href="../../PART10/part10-summary.html">
+            
+                    
+                    PART 10 区块链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.11.1" >
+            
+                <span>
+            
+                    
+                    比特币实战
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="../../PART11/part11-summary.html">
+            
+                <a href="../../PART11/part11-summary.html">
+            
+                    
+                    PART 11 系统架构之道
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.12.1" data-path="../../PART11/part11-summary.html">
+            
+                <a href="../../PART11/part11-summary.html">
+            
+                    
+                    API 设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.12.1.1" data-path="../../PART11/api-design/normal-api.html">
+            
+                <a href="../../PART11/api-design/normal-api.html">
+            
+                    
+                    标准API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.1.2" data-path="../../PART11/api-design/restful-api.html">
+            
+                <a href="../../PART11/api-design/restful-api.html">
+            
+                    
+                    RESTful风格API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.1.3" data-path="../../PART11/api-design/save-api.html">
+            
+                <a href="../../PART11/api-design/save-api.html">
+            
+                    
+                    安全的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >02 常用函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x51FD;&#x6570;"><b>1. </b>&#x5E38;&#x7528;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x51FD;&#x6570;"><b>1.1. </b>&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#if"><b>1.1.1. </b>IF()</a></li><li><span class="title-icon "></span><a href="#ifnull"><b>1.1.2. </b>IFNULL()</a></li><li><span class="title-icon "></span><a href="#case-when"><b>1.1.3. </b>CASE WHEN</a></li></ul><li><span class="title-icon "></span><a href="#&#x805A;&#x5408;&#x51FD;&#x6570;"><b>1.2. </b>&#x805A;&#x5408;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#max"><b>1.2.1. </b>MAX()</a></li><li><span class="title-icon "></span><a href="#min"><b>1.2.2. </b>MIN()</a></li><li><span class="title-icon "></span><a href="#count"><b>1.2.3. </b>COUNT()</a></li><li><span class="title-icon "></span><a href="#sum"><b>1.2.4. </b>SUM()</a></li><li><span class="title-icon "></span><a href="#avg"><b>1.2.5. </b>AVG()</a></li></ul><li><span class="title-icon "></span><a href="#&#x6570;&#x503C;&#x64CD;&#x4F5C;"><b>1.3. </b>&#x6570;&#x503C;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#abs"><b>1.3.1. </b>ABS()</a></li><li><span class="title-icon "></span><a href="#ceil"><b>1.3.2. </b>CEIL()</a></li><li><span class="title-icon "></span><a href="#floor"><b>1.3.3. </b>FLOOR()</a></li><li><span class="title-icon "></span><a href="#mod"><b>1.3.4. </b>MOD()</a></li><li><span class="title-icon "></span><a href="#rand"><b>1.3.5. </b>RAND()</a></li><li><span class="title-icon "></span><a href="#round"><b>1.3.6. </b>ROUND()</a></li><li><span class="title-icon "></span><a href="#truncate"><b>1.3.7. </b>TRUNCATE()</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;"><b>1.4. </b>&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#concat"><b>1.4.1. </b>CONCAT()</a></li><li><span class="title-icon "></span><a href="#concatws"><b>1.4.2. </b>CONCAT_WS()</a></li><li><span class="title-icon "></span><a href="#groupconcat"><b>1.4.3. </b>GROUP_CONCAT()</a></li><li><span class="title-icon "></span><a href="#left"><b>1.4.4. </b>LEFT()</a></li><li><span class="title-icon "></span><a href="#right"><b>1.4.5. </b>RIGHT()</a></li><li><span class="title-icon "></span><a href="#substring"><b>1.4.6. </b>SUBSTRING()</a></li><li><span class="title-icon "></span><a href="#substringindex"><b>1.4.7. </b>SUBSTRING_INDEX()</a></li><li><span class="title-icon "></span><a href="#instr"><b>1.4.8. </b>INSTR()</a></li><li><span class="title-icon "></span><a href="#findinset"><b>1.4.9. </b>FIND_IN_SET()</a></li></ul><li><span class="title-icon "></span><a href="#&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;"><b>1.5. </b>&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x8F6C;&#x6362;&#x51FD;&#x6570;&#x548C;&#x8FD0;&#x7B97;&#x7B26;"><b>1.6. </b>&#x8F6C;&#x6362;&#x51FD;&#x6570;&#x548C;&#x8FD0;&#x7B97;&#x7B26;</a></li><ul><li><span class="title-icon "></span><a href="#convert"><b>1.6.1. </b>convert()</a></li><li><span class="title-icon "></span><a href="#cast"><b>1.6.2. </b>cast()</a></li></ul><li><span class="title-icon "></span><a href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;"><b>1.7. </b>&#x52A0;&#x5BC6;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#aesencrypt"><b>1.7.1. </b>AES_ENCRYPT()</a></li><li><span class="title-icon "></span><a href="#aesdecrypt"><b>1.7.2. </b>AES_DECRYPT()</a></li></ul></ul><li><span class="title-icon "></span><a href="#mysql-8-&#x65B0;&#x589E;&#x51FD;&#x6570;"><b>2. </b>MySQL 8 &#x65B0;&#x589E;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#json&#x51FD;&#x6570;"><b>2.1. </b>JSON&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x7A97;&#x53E3;&#x51FD;&#x6570;"><b>2.2. </b>&#x7A97;&#x53E3;&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>3. </b>&#x53C2;&#x8003;</a></li></ul></div><a href="#&#x5E38;&#x7528;&#x51FD;&#x6570;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5E38;&#x7528;&#x51FD;&#x6570;"><a name="&#x5E38;&#x7528;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5E38;&#x7528;&#x51FD;&#x6570;</h1>
+<h2 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x51FD;&#x6570;"><a name="&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x51FD;&#x6570;</h2>
+<h3 id="if"><a name="if" class="anchor-navigation-ex-anchor" href="#if"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. IF()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x8868;&#x8FBE;&#x5F0F; expr &#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5F53; expr &#x4E3A;&#x771F;&#x662F;&#x8FD4;&#x56DE; v1 &#x7684;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; v2</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>IF(expr, v1, v2)</code></li>
+</ul>
+<pre class="language-"><code class="lang-sql"><span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; yes</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">IF</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&apos;yes&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;no&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; no</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">IF</span><span class="token punctuation">(</span>STRCMP<span class="token punctuation">(</span><span class="token string">&apos;abc&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;abcd&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;yes&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;no&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; &#x7A7A;&#x5B57;&#x4E32;</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">IF</span><span class="token punctuation">(</span>LENGTH<span class="token punctuation">(</span>TRIM<span class="token punctuation">(</span><span class="token boolean">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x975E;&#x7A7A;&#x5B57;&#x4E32;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x7A7A;&#x5B57;&#x4E32;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="ifnull"><a name="ifnull" class="anchor-navigation-ex-anchor" href="#ifnull"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. IFNULL()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x5982;&#x679C; v1 &#x4E0D;&#x4E3A; NULL&#xFF0C;&#x5219; IFNULL &#x51FD;&#x6570;&#x8FD4;&#x56DE; v1&#xFF1B;&#x5426;&#x5219;&#x8FD4;&#x56DE; v2 </li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>IFNULL(v1, v2)</code></li>
+<li>&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-sql"><span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; 8</span>
+<span class="token keyword">SELECT</span> IFNULL<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; 8</span>
+<span class="token keyword">SELECT</span> IFNULL<span class="token punctuation">(</span><span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; 8</span>
+<span class="token keyword">SELECT</span> IFNULL<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="case-when"><a name="case-when" class="anchor-navigation-ex-anchor" href="#case-when"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. CASE WHEN</h3>
+<ul>
+<li><p>&#x529F;&#x80FD;&#xFF1A;&#x9664;&#x4E86; IF &#x51FD;&#x6570;&#xFF0C;MySQL &#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x66FF;&#x4EE3;&#x7684;&#x6761;&#x4EF6;&#x8BED;&#x53E5; CASE WHEN&#x3002;CASE &#x8BED;&#x53E5;&#x6709;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#xFF0C;&#x7B80;&#x5355;&#x51FD;&#x6570;&#x548C;&#x641C;&#x7D22;&#x51FD;&#x6570;&#x3002;</p>
+</li>
+<li><p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><p>&#x7B80;&#x5355;&#x51FD;&#x6570; - &#x679A;&#x4E3E;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x503C;</p>
+<pre class="language-"><code class="lang-sql"><span class="token keyword">CASE</span> case_value
+<span class="token keyword">WHEN</span> when_value <span class="token keyword">THEN</span> statement_list
+<span class="token punctuation">[</span><span class="token keyword">WHEN</span> when_value <span class="token keyword">THEN</span> statement_list<span class="token punctuation">]</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">[</span><span class="token keyword">ELSE</span> statement_list<span class="token punctuation">]</span>
+<span class="token keyword">END</span> <span class="token keyword">CASE</span>
+</code></pre>
+</li>
+<li><p>&#x641C;&#x7D22;&#x51FD;&#x6570; - &#x641C;&#x7D22;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5199;&#x5224;&#x65AD;&#xFF0C;&#x5E76;&#x4E14;&#x641C;&#x7D22;&#x51FD;&#x6570;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x503C;&#xFF0C;&#x5176;&#x4ED6;case&#x88AB;&#x5FFD;&#x7565;</p>
+<pre class="language-"><code class="lang-sql"><span class="token keyword">CASE</span>
+<span class="token keyword">WHEN</span> search_condition <span class="token keyword">THEN</span> statement_list
+<span class="token punctuation">[</span><span class="token keyword">WHEN</span> search_condition <span class="token keyword">THEN</span> statement_list<span class="token punctuation">]</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">[</span><span class="token keyword">ELSE</span> statement_list<span class="token punctuation">]</span>
+<span class="token keyword">END</span> <span class="token keyword">CASE</span>
+<span class="token keyword">CASE</span> <span class="token keyword">WHEN</span> <span class="token punctuation">[</span>expr<span class="token punctuation">]</span> <span class="token keyword">THEN</span> <span class="token punctuation">[</span>result1<span class="token punctuation">]</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">ELSE</span> <span class="token punctuation">[</span><span class="token keyword">default</span><span class="token punctuation">]</span> <span class="token keyword">END</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li>&#x793A;&#x4F8B;&#xFF1A;<pre class="language-"><code class="lang-sql"><span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; &#x661F;&#x671F;&#x4E00;</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">CASE</span> WEEKDAY<span class="token punctuation">(</span><span class="token function">NOW</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+<span class="token keyword">WHEN</span> <span class="token number">0</span> <span class="token keyword">THEN</span> <span class="token string">&apos;&#x661F;&#x671F;&#x4E00;&apos;</span> <span class="token keyword">WHEN</span> <span class="token number">1</span> <span class="token keyword">THEN</span> <span class="token string">&apos;&#x661F;&#x671F;&#x4E8C;&apos;</span> <span class="token keyword">WHEN</span> <span class="token number">2</span> <span class="token keyword">THEN</span> <span class="token string">&apos;&#x661F;&#x671F;&#x4E09;&apos;</span> 
+<span class="token keyword">WHEN</span> <span class="token number">3</span> <span class="token keyword">THEN</span> <span class="token string">&apos;&#x661F;&#x671F;&#x56DB;&apos;</span> <span class="token keyword">WHEN</span> <span class="token number">4</span> <span class="token keyword">THEN</span> <span class="token string">&apos;&#x661F;&#x671F;&#x4E94;&apos;</span> <span class="token keyword">WHEN</span> <span class="token number">5</span> <span class="token keyword">THEN</span> <span class="token string">&apos;&#x661F;&#x671F;&#x516D;&apos;</span>
+<span class="token keyword">ELSE</span> <span class="token string">&apos;&#x661F;&#x671F;&#x5929;&apos;</span> <span class="token keyword">END</span> <span class="token keyword">AS</span> today<span class="token punctuation">;</span>
+<span class="token comment">/*
+&#x67E5;&#x770B;&#x5404;&#x4E2A;ip&#x4E0B;&#x7684;query&#x67E5;&#x8BE2;&#x6709;&#x591A;&#x6162;&#xFF0C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;
+ip            slowness  
+------------  ----------     
+192.168.2.25  0
+192.168.2.26  10      
+192.168.2.27  110                  
+*/</span>
+<span class="token keyword">SELECT</span> SUBSTRING_INDEX<span class="token punctuation">(</span>a<span class="token punctuation">.</span>HOST<span class="token punctuation">,</span><span class="token string">&apos;:&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ip<span class="token punctuation">,</span> 
+<span class="token function">SUM</span><span class="token punctuation">(</span><span class="token keyword">CASE</span>
+<span class="token keyword">WHEN</span> a<span class="token punctuation">.</span>INFO <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token operator">AND</span> a<span class="token punctuation">.</span><span class="token keyword">TIME</span> <span class="token operator">&gt;</span> <span class="token number">2</span> <span class="token operator">AND</span> a<span class="token punctuation">.</span><span class="token keyword">TIME</span> <span class="token operator">&lt;=</span> <span class="token number">5</span> <span class="token keyword">THEN</span> <span class="token number">1</span>
+<span class="token keyword">WHEN</span> a<span class="token punctuation">.</span>INFO <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token operator">AND</span> a<span class="token punctuation">.</span><span class="token keyword">TIME</span> <span class="token operator">&gt;</span> <span class="token number">5</span> <span class="token operator">AND</span> a<span class="token punctuation">.</span><span class="token keyword">TIME</span> <span class="token operator">&lt;=</span> <span class="token number">8</span> <span class="token keyword">THEN</span> <span class="token number">10</span>
+<span class="token keyword">WHEN</span> a<span class="token punctuation">.</span>INFO <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token operator">AND</span> a<span class="token punctuation">.</span><span class="token keyword">TIME</span> <span class="token operator">&gt;</span> <span class="token number">8</span> <span class="token keyword">THEN</span> <span class="token number">100</span>
+<span class="token keyword">ELSE</span> <span class="token number">0</span> <span class="token keyword">END</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> slowness
+<span class="token keyword">FROM</span> information_schema<span class="token punctuation">.</span>processlist a <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> SUBSTRING_INDEX<span class="token punctuation">(</span>a<span class="token punctuation">.</span>HOST<span class="token punctuation">,</span><span class="token string">&apos;:&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x805A;&#x5408;&#x51FD;&#x6570;"><a name="&#x805A;&#x5408;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x805A;&#x5408;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x805A;&#x5408;&#x51FD;&#x6570;</h2>
+<h3 id="max"><a name="max" class="anchor-navigation-ex-anchor" href="#max"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. MAX()</h3>
+<h3 id="min"><a name="min" class="anchor-navigation-ex-anchor" href="#min"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. MIN()</h3>
+<h3 id="count"><a name="count" class="anchor-navigation-ex-anchor" href="#count"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. COUNT()</h3>
+<h3 id="sum"><a name="sum" class="anchor-navigation-ex-anchor" href="#sum"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. SUM()</h3>
+<h3 id="avg"><a name="avg" class="anchor-navigation-ex-anchor" href="#avg"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.5. AVG()</h3>
+<h2 id="&#x6570;&#x503C;&#x64CD;&#x4F5C;"><a name="&#x6570;&#x503C;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x503C;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x6570;&#x503C;&#x64CD;&#x4F5C;</h2>
+<h3 id="abs"><a name="abs" class="anchor-navigation-ex-anchor" href="#abs"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. ABS()</h3>
+<h3 id="ceil"><a name="ceil" class="anchor-navigation-ex-anchor" href="#ceil"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. CEIL()</h3>
+<h3 id="floor"><a name="floor" class="anchor-navigation-ex-anchor" href="#floor"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. FLOOR()</h3>
+<h3 id="mod"><a name="mod" class="anchor-navigation-ex-anchor" href="#mod"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. MOD()</h3>
+<h3 id="rand"><a name="rand" class="anchor-navigation-ex-anchor" href="#rand"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.5. RAND()</h3>
+<h3 id="round"><a name="round" class="anchor-navigation-ex-anchor" href="#round"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6. ROUND()</h3>
+<h3 id="truncate"><a name="truncate" class="anchor-navigation-ex-anchor" href="#truncate"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.7. TRUNCATE()</h3>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</h2>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html" target="_blank">https://dev.mysql.com/doc/refman/8.0/en/string-functions.html</a></p>
+<h3 id="concat"><a name="concat" class="anchor-navigation-ex-anchor" href="#concat"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. CONCAT()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x5C06;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>concat(str1, str2,...)</code></li>
+</ul>
+<blockquote>
+<p><strong>[!TIP]</strong></p>
+<p><code>concat()</code>&#x8FDE;&#x63A5;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;null&#xFF0C;&#x6574;&#x4E2A;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5C31;&#x4E3A;null&#x3002;</p>
+</blockquote>
+<h3 id="concatws"><a name="concatws" class="anchor-navigation-ex-anchor" href="#concatws"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. CONCAT_WS()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x7528;&#x5236;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x5C06;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>concat_ws(seperator, str1, str2,...)</code></li>
+</ul>
+<blockquote>
+<p><strong>[!TIP]</strong></p>
+<p><code>concat_ws()</code>&#x8FDE;&#x63A5;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;null&#xFF0C;&#x5219;&#x5FFD;&#x7565;&#x5B83;&#x4E0D;&#x62FC;&#x63A5;&#x5230;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;&#x3002;</p>
+</blockquote>
+<h3 id="groupconcat"><a name="groupconcat" class="anchor-navigation-ex-anchor" href="#groupconcat"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. GROUP_CONCAT()</h3>
+<ul>
+<li><p>&#x529F;&#x80FD;&#xFF1A;&#x5C06;group by&#x4EA7;&#x751F;&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x4E2D;&#x7684;&#x503C;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7ED3;&#x679C;&#x3002;</p>
+</li>
+<li><p>&#x8BED;&#x6CD5;&#xFF1A;<code>group_concat( [distinct] &#x8981;&#x8FDE;&#x63A5;&#x7684;&#x5B57;&#x6BB5; [order by &#x6392;&#x5E8F;&#x5B57;&#x6BB5; asc/desc ] [separator &apos;&#x5206;&#x9694;&#x7B26;&apos;] )</code></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>[!TIP]</strong></p>
+<p><strong>1.</strong> <code>group_concat()</code>&#x4F1A;&#x8FC7;&#x6EE4;&#x6389;NULL&#x503C;&#x3002;</p>
+<p><strong>2.</strong> <code>group_concat()</code>&#x6709;&#x9ED8;&#x8BA4;&#x957F;&#x5EA6;&#x9650;&#x5236;&#xFF0C;&#x5F53;&#x524D;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x67E5;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code class="lang-sql"><span class="token keyword">SELECT</span> @<span class="token variable">@global.</span> group_concat_max_len<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x957F;&#x5EA6;&#x4E3A;1024&#xFF0C;&#x8D85;&#x51FA;&#x90E8;&#x5206;&#x5C06;&#x88AB;&#x4E22;&#x5F03;&#xFF0C;&#x4E0D;&#x8FC7;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x5B83;&#x7684;&#x9ED8;&#x8BA4;&#x957F;&#x5EA6;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x8FD9;&#x91CC;&#x6709;2&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><p>1&#xFF09;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x8BED;&#x53E5;&#x8BBE;&#x7F6E;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#xFF08;&#x5728;MySQL&#x91CD;&#x542F;&#x524D;&#x4E00;&#x76F4;&#x6709;&#x6548;&#xFF09;</p>
+<p><code>SET GLOBAL group_concat_max_len=1024000;</code>&#xFF08;&#x5168;&#x5C40;group_concat&#x957F;&#x5EA6;&#xFF09;</p>
+<p><code>SET SESSION group_concat_max_len = 1024000;</code>&#xFF08;&#x5F53;&#x524D;session&#x7684;group_concat&#x957F;&#x5EA6;&#xFF09;</p>
+</li>
+<li><p>2&#xFF09;&#x5728;MySQL&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x4EE5;&#x4E0B;&#x8BED;&#x53E5;&#xFF08;&#x5168;&#x5C40;&#xFF0C;MySQL&#x91CD;&#x542F;&#x540E;&#x6C38;&#x4E45;&#x751F;&#x6548;&#xFF09;</p>
+<p><code>group_concat_max_len = 1024000</code></p>
+</li>
+</ul>
+<p><strong>3.</strong> &#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9ED8;&#x8BA4;&#x5206;&#x9694;&#x7B26;&#x4E3A;&#x9017;&#x53F7;&quot;,&quot;&#xFF0C;&#x82E5;&#x8981;&#x6539;&#x4E3A;&#x5176;&#x4ED6;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;<code>SEPARATOR</code>&#x5B50;&#x53E5;&#x6307;&#x5B9A;</p>
+<pre class="language-"><code class="lang-sql"><span class="token comment">## GROUP_CONCAT&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x5206;&#x9694;&#x7B26;</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">month</span><span class="token punctuation">,</span>
+GROUP_CONCAT<span class="token punctuation">(</span>article SEPARATOR <span class="token string">&apos;|&apos;</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> articles
+<span class="token keyword">FROM</span> user_table 
+<span class="token keyword">WHERE</span> author <span class="token operator">=</span> <span class="token string">&apos;luckinjack&apos;</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> <span class="token keyword">month</span>
+</code></pre>
+</blockquote>
+<h3 id="left"><a name="left" class="anchor-navigation-ex-anchor" href="#left"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. LEFT()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x4ECE;&#x5DE6;&#x5F00;&#x59CB;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>left(&#x88AB;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;, &#x622A;&#x53D6;&#x957F;&#x5EA6;)</code></li>
+<li>&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-sql"><span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A;&#xFF1A;www.yuan</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">LEFT</span><span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="right"><a name="right" class="anchor-navigation-ex-anchor" href="#right"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. RIGHT()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x4ECE;&#x53F3;&#x5F00;&#x59CB;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>right(&#x88AB;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;, &#x622A;&#x53D6;&#x957F;&#x5EA6;)</code></li>
+<li>&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-sql"><span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A;&#xFF1A;gu.com</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">RIGHT</span><span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="substring"><a name="substring" class="anchor-navigation-ex-anchor" href="#substring"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.6. SUBSTRING()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x622A;&#x53D6;&#x7279;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>substring(&#x88AB;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#xFF0C; &#x4ECE;&#x7B2C;&#x51E0;&#x4F4D;&#x5F00;&#x59CB;&#x622A;&#x53D6;)</code>&#x3001;<code>substring(&#x88AB;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4ECE;&#x7B2C;&#x51E0;&#x4F4D;&#x5F00;&#x59CB;&#x622A;&#x53D6;&#xFF0C;&#x622A;&#x53D6;&#x957F;&#x5EA6;)</code></li>
+<li>&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-sql"><span class="token comment">## &#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;9&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x8BFB;&#x53D6;&#x76F4;&#x81F3;&#x7ED3;&#x675F;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A;&#xFF1A;rengu.com</span>
+<span class="token keyword">SELECT</span> SUBSTRING<span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span>
+
+<span class="token comment">## &#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;9&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#xFF0C;&#x53EA;&#x53D6;3&#x4E2A;&#x5B57;&#x7B26;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A;&#xFF1A;ren</span>
+<span class="token keyword">SELECT</span> SUBSTRING<span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token comment">## &#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5012;&#x6570;&#x7B2C;6&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x622A;&#x53D6;&#xFF0C;&#x53EA;&#x53D6;2&#x4E2A;&#x5B57;&#x7B26;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; gu</span>
+<span class="token keyword">SELECT</span> SUBSTRING<span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="substringindex"><a name="substringindex" class="anchor-navigation-ex-anchor" href="#substringindex"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.7. SUBSTRING_INDEX()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x6309;&#x5173;&#x952E;&#x5B57;&#x8FDB;&#x884C;&#x622A;&#x53D6;&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>substring_index(&#x88AB;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5173;&#x952E;&#x5B57;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;)</code></li>
+<li>&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-sql"><span class="token comment">## &#x622A;&#x53D6;&#x7B2C;&#x4E8C;&#x4E2A;&#x201C;.&#x201D;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A;&#xFF1A;www.yuanrengu</span>
+<span class="token keyword">SELECT</span> SUBSTRING_INDEX<span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;.&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment">## &#x622A;&#x53D6;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;&#x201C;.&#x201D;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A; yuanrengu.com</span>
+<span class="token keyword">SELECT</span> SUBSTRING_INDEX<span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;.&apos;</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment">## &#x5982;&#x679C;&#x5173;&#x952E;&#x5B57;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</span>
+<span class="token comment">-- &#x7ED3;&#x679C;&#x4E3A;&#xFF1A;www.yuanrengu.com</span>
+<span class="token keyword">SELECT</span> SUBSTRING_INDEX<span class="token punctuation">(</span><span class="token string">&apos;www.yuanrengu.com&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;sprite&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="instr"><a name="instr" class="anchor-navigation-ex-anchor" href="#instr"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.8. INSTR()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x83B7;&#x53D6;&#x5B50;&#x4E32;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4E0B;&#x6807;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;0&#xFF08;&#x4E0B;&#x6807;&#x4ECE;1&#x5F00;&#x59CB;&#xFF09;&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>instr(str, substr)</code>&#xFF0C;<code>str</code>&#x662F;&#x5230;&#x54EA;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x53BB;&#x641C;&#x7D22;&#xFF0C;<code>substr</code>&#x662F;&#x8981;&#x641C;&#x7D20;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+</ul>
+<blockquote>
+<p><strong>[!TIP]</strong></p>
+<ol>
+<li><code>INSTR()</code>&#x51FD;&#x6570;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;</li>
+<li><code>INSTR(&apos;LuckinJack&apos;) &gt; 0</code> &#x7B49;&#x6548;&#x4E8E;&#x4F7F;&#x7528;&#x8FD0;&#x7B97;&#x7B26; <code>Like &apos;%LuckinJack%&apos;</code> &#x8FDB;&#x884C;&#x6A21;&#x7CCA;&#x67E5;&#x8BE2;</li>
+</ol>
+</blockquote>
+<h3 id="findinset"><a name="findinset" class="anchor-navigation-ex-anchor" href="#findinset"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.9. FIND_IN_SET()</h3>
+<ul>
+<li>&#x529F;&#x80FD;&#xFF1A;&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x518D;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4E0B;&#x6807;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;0&#x3002;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;<code>find_in_set(str, strlist)</code>&#xFF0C;<code>strlist&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;</code> &#x5C31;&#x662F;&#x7531;&#x4E00;&#x4E9B;&#x88AB;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5F00;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5408;&#x5E76;&#x7EC4;&#x6210;&#x7684;&#x5355;&#x4E00;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-sql"><span class="token keyword">SELECT</span> FIND_IN_SET<span class="token punctuation">(</span><span class="token string">&apos;1&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;1,2,3,4,5,6&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment"># &#x8FD4;&#x56DE;&#x4E0B;&#x6807;1</span>
+<span class="token keyword">SELECT</span> FIND_IN_SET<span class="token punctuation">(</span><span class="token string">&apos;2&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;1,2,3,4,5,6&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment"># &#x8FD4;&#x56DE;&#x4E0B;&#x6807;2</span>
+<span class="token keyword">SELECT</span> FIND_IN_SET<span class="token punctuation">(</span><span class="token string">&apos;1&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>               <span class="token comment"># &#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x5B58;&#x5728;&#x4E8E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;0</span>
+<span class="token keyword">SELECT</span> FIND_IN_SET<span class="token punctuation">(</span><span class="token boolean">null</span><span class="token punctuation">,</span><span class="token string">&apos;1,2,3,4,5,6&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment"># &#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;NULL&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E3A; NULL</span>
+<span class="token keyword">SELECT</span> FIND_IN_SET<span class="token punctuation">(</span><span class="token string">&apos;1&apos;</span><span class="token punctuation">,</span><span class="token boolean">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment"># &#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;NULL&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E3A; NULL</span>
+</code></pre>
+<blockquote>
+<p>[!NOTE]</p>
+<p><strong>&#x6CE8;&#x610F;&#x533A;&#x5206; <code>FIND_IN_SET</code> &#x3001; <code>IN</code> &#x3001;<code>INSTR</code>&#x3001;<code>LIKE</code> &#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;</strong></p>
+</blockquote>
+<h2 id="&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;"><a name="&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x51FD;&#x6570;</h2>
+<p><strong>MySQL &#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5185;&#x5EFA;&#x65E5;&#x671F;&#x51FD;&#x6570;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x51FD;&#x6570;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NOW()</code></td>
+<td>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td><code>CURDATE()</code></td>
+<td>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td><code>CURTIME()</code></td>
+<td>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td><code>DATE()</code></td>
+<td>&#x63D0;&#x53D6;&#x65E5;&#x671F;&#x6216;&#x65E5;&#x671F;/&#x65F6;&#x95F4;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x65E5;&#x671F;&#x90E8;&#x5206;</td>
+</tr>
+<tr>
+<td><code>EXTRACT()</code></td>
+<td>&#x8FD4;&#x56DE;&#x65E5;&#x671F;/&#x65F6;&#x95F4;&#x6309;&#x7684;&#x5355;&#x72EC;&#x90E8;&#x5206;</td>
+</tr>
+<tr>
+<td><code>DATE_ADD()</code></td>
+<td>&#x7ED9;&#x65E5;&#x671F;&#x6DFB;&#x52A0;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;</td>
+</tr>
+<tr>
+<td><code>DATE_SUB()</code></td>
+<td>&#x4ECE;&#x65E5;&#x671F;&#x51CF;&#x53BB;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694; </td>
+</tr>
+<tr>
+<td><code>DATEDIFF()</code></td>
+<td>&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x65E5;&#x671F;&#x4E4B;&#x95F4;&#x7684;&#x5929;&#x6570;</td>
+</tr>
+<tr>
+<td><code>DATE_FORMAT()</code></td>
+<td>&#x7528;&#x4E0D;&#x540C;&#x7684;&#x683C;&#x5F0F;&#x663E;&#x793A;&#x65E5;&#x671F;/&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MySQL Date &#x6570;&#x636E;&#x7C7B;&#x578B;</strong></p>
+<ol>
+<li>DATE - &#x683C;&#x5F0F; <code>YYYY-MM-DD</code></li>
+<li>DATETIME - &#x683C;&#x5F0F;: <code>YYYY-MM-DD HH:MM:SS</code></li>
+<li>TIMESTAMP - &#x683C;&#x5F0F;: <code>YYYY-MM-DD HH:MM:SS</code></li>
+<li>YEAR - &#x683C;&#x5F0F; <code>YYYY</code> &#x6216; <code>YY</code></li>
+</ol>
+<p>Linux/Unix&#x65F6;&#x95F4;&#x6233; &#x8F6C;&#x6362;&#x4E3A; MySQL&#x65F6;&#x95F4;&#x65E5;&#x671F;&#x7C7B;&#x578B;&#xFF1A;</p>
+<p>UNIX_TIMESTAMP(NOW())                   //&#x5C06;mysql&#x7684;datetime&#x8F6C;&#x6362;&#x6210;linux/unix&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF1B;&#x65E5;&#x671F;&#x65F6;&#x95F4;</p>
+<p>UNIX_TIMESTAMP(DATE(NOW()))       //&#x5C06;mysql&#x7684;date&#x8F6C;&#x6362;&#x6210;linux/unix&#x7684;&#x65E5;&#x671F;&#x3002;</p>
+<p>UNIX_TIMESTAMP(TIME(NOW()))<br>//&#x5C06;mysql&#x7684;time&#x8F6C;&#x6362;&#x6210;linux/unix&#x7684;&#x65F6;&#x95F4;&#x3002;(&#x7528;&#x95EE;&#x9898;)</p>
+<p>FROM_UNIXTIME(time_t)          //&#x5C06;unix&#x7684;&#x65F6;&#x95F4;&#x6233;&#x8F6C;&#x6362;&#x6210;mysql&#x7684;datetime&#xFF1B;&#x65E5;&#x671F;&#x65F6;&#x95F4;</p>
+<p>DATE(FROM_UNIXTIME(time_t))          //&#x65E5;&#x671F;</p>
+<p>TIME(FROM_UNIXTIME(time_t))           //&#x65F6;&#x95F4;</p>
+<ul>
+<li>DATE_FORMAT(date,format)</li>
+</ul>
+<h2 id="&#x8F6C;&#x6362;&#x51FD;&#x6570;&#x548C;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x8F6C;&#x6362;&#x51FD;&#x6570;&#x548C;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8F6C;&#x6362;&#x51FD;&#x6570;&#x548C;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x8F6C;&#x6362;&#x51FD;&#x6570;&#x548C;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<h3 id="convert"><a name="convert" class="anchor-navigation-ex-anchor" href="#convert"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1. convert()</h3>
+<h3 id="cast"><a name="cast" class="anchor-navigation-ex-anchor" href="#cast"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.2. cast()</h3>
+<h2 id="&#x52A0;&#x5BC6;&#x51FD;&#x6570;"><a name="&#x52A0;&#x5BC6;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x52A0;&#x5BC6;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x52A0;&#x5BC6;&#x51FD;&#x6570;</h2>
+<h3 id="aesencrypt"><a name="aesencrypt" class="anchor-navigation-ex-anchor" href="#aesencrypt"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1. AES_ENCRYPT()</h3>
+<h3 id="aesdecrypt"><a name="aesdecrypt" class="anchor-navigation-ex-anchor" href="#aesdecrypt"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.2. AES_DECRYPT()</h3>
+<h1 id="mysql-8-&#x65B0;&#x589E;&#x51FD;&#x6570;"><a name="mysql-8-&#x65B0;&#x589E;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#mysql-8-&#x65B0;&#x589E;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2. MySQL 8 &#x65B0;&#x589E;&#x51FD;&#x6570;</h1>
+<h2 id="json&#x51FD;&#x6570;"><a name="json&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#json&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. JSON&#x51FD;&#x6570;</h2>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/json-function-reference.html" target="_blank">https://dev.mysql.com/doc/refman/8.0/en/json-function-reference.html</a></p>
+<h2 id="&#x7A97;&#x53E3;&#x51FD;&#x6570;"><a name="&#x7A97;&#x53E3;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x7A97;&#x53E3;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x7A97;&#x53E3;&#x51FD;&#x6570;</h2>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html" target="_blank">https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html</a></p>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x53C2;&#x8003;</h1>
+<ul>
+<li><p><a href="http://c.biancheng.net/mysql/function/" target="_blank">MySQL&#x51FD;&#x6570;&#x5927;&#x5168;&#xFF0C;MySQL&#x5E38;&#x7528;&#x51FD;&#x6570;&#x6C47;&#x603B; (biancheng.net)</a></p>
+</li>
+<li><p><a href="https://dev.mysql.com/doc/refman/8.0/en/functions.html" target="_blank">MySQL 8.0 &#x53C2;&#x8003;&#x624B;&#x518C; - &#x7B2C; 12 &#x7AE0;&#x51FD;&#x6570;&#x548C;&#x8FD0;&#x7B97;&#x7B26;</a></p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mysql-01-basic-operation.html" class="navigation navigation-prev " aria-label="Previous page: 01 基本操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mysql-03-query-tuning-solutions.html" class="navigation navigation-next " aria-label="Next page: 03 查询调优">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02 常用函数","level":"3.5.1.3","depth":3,"next":{"title":"03 查询调优","level":"3.5.1.4","depth":3,"path":"article/PART4/mysql/mysql-03-query-tuning-solutions.md","ref":"./article/PART4/mysql/mysql-03-query-tuning-solutions.md","articles":[]},"previous":{"title":"01 基本操作","level":"3.5.1.2","depth":3,"path":"article/PART4/mysql/mysql-01-basic-operation.md","ref":"./article/PART4/mysql/mysql-01-basic-operation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","chapter-fold","hide-element","splitter","prism","flexible-alerts","page-toc-button","anchor-navigation-ex","katex","-pageview-count","-page-toc-button","-theme-comscore","-highlight","-sharing","-tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"pluginsConfig":{"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"flexible-alerts":{"style":"flat"}},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LuckinJack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LuckinJack的GitBook","language":"zh-hans","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"article/PART4/mysql/mysql-02-commly-used-functions.md","mtime":"2021-08-16T15:58:58.681Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-16T13:30:50.523Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

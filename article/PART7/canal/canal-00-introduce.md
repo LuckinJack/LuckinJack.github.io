@@ -1,0 +1,2 @@
+阿里开源的Canal，来进行binlog解析与同步。Canal会伪装成MySQL的Slave从库，然后解析好行格式的binlog，再以更容易解析的格式（如JSON）发送到消息队列
+
